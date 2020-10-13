@@ -1,11 +1,14 @@
 const { Client, Collection } = require("discord.js");
 const fs = require("fs");
 const path = require("path");
+const { messageId } = require("./commands/apod");
 
 require("dotenv").config();
 const PREFIX = ".";
 
-const client = new Client();
+const client = new Client({
+  partials: ['MESSAGE', 'REACTION']
+});
 client.commands = new Collection();
 const commandFiles = fs
   .readdirSync(path.join(__dirname, "commands"))
@@ -41,5 +44,10 @@ client.on("message", (msg) => {
     msg.reply("There was an error.");
   }
 });
+
+client.on("messageReactionAdd", (reaction, user) => {
+  console.log(reaction);
+  console.log(user);
+})
 
 client.login(process.env.DISCORD_BOT_TOKEN);

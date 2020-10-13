@@ -1,6 +1,7 @@
 const { MessageEmbed } = require("discord.js");
 
 const https = require("https");
+let messageId = null;
 let apod = null;
 const apodEmbed = new MessageEmbed();
 https.get(
@@ -33,10 +34,17 @@ module.exports = {
   name: "apod",
   aliases: ["a"],
   description: "Astronomy Picture of Day",
+  messageId: messageId,
   execute(message, args) {
+    
     (async() => {
     await message.channel.send({ files: [apod.url] });
-    message.channel.send(apodEmbed);
+    message.channel.send(apodEmbed)
+      .then(async(msg) => {
+        messageId = msg.id;
+       await msg.react("◀")
+       await msg.react("▶")
+      })
     })();
   },
 };

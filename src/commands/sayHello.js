@@ -21,22 +21,15 @@ const greetings = {
   portugese: ["Olá ", "Oi!"],
 };
 const keys = Object.keys(greetings);
-let randomKey = greetings[keys[(keys.length * Math.random()) << 0]];
+let randomKey = keys[Math.floor(Math.random() * keys.length)];
 
 const greeting = function (rKey) {
-  if (typeof rKey == "string") {
     if (typeof greetings[rKey] == "string") {
       return greetings[rKey];
     } else {
       return greetings[rKey][Math.floor(Math.random() * greetings[rKey].length)];
     }
   }
-  if (typeof rKey === "string") {
-    return rKey;
-  } else {
-    return rKey[Math.floor(Math.random() * rKey.length)];
-  }
-};
 
 module.exports = {
   name: "hello",
@@ -45,6 +38,7 @@ module.exports = {
   execute(message, args) {
     let randomGreeting = null;
     if (!args.length) {
+      console.log(randomKey);
       randomGreeting = greeting(randomKey);
       message.channel.send({
         files: [helloGif[Math.floor(Math.random() * helloGif.length)]],
