@@ -27,10 +27,16 @@ client.on("message", (msg) => {
     .substring(PREFIX.length)
     .split(/\s+/);
 
-  if (!client.commands.has(CMD_NAME)) return;
+  const command =
+    client.commands.get(CMD_NAME) ||
+    client.commands.find(
+      (cmd) => cmd.aliases && cmd.aliases.includes(CMD_NAME)
+    );
+
+  if (!command) return;
   try {
-    client.commands.get(CMD_NAME).execute(msg, args);
-  } catch(err) {
+    command.execute(msg, args);
+  } catch (err) {
     console.log(err);
     msg.reply("There was an error.");
   }
