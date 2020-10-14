@@ -46,8 +46,8 @@ client.on("message", (msg) => {
 });
 
 client.on("messageReactionAdd", (reaction, user) => {
-  console.log(reaction);
-  console.log(user);
+  // console.log(reaction);
+  // console.log(user);
 })
 
 client.login(process.env.DISCORD_BOT_TOKEN);

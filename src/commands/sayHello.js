@@ -1,8 +1,12 @@
+const path = require("path");
 const helloGif = [
-  "https://media.giphy.com/media/xT9IgG50Fb7Mi0prBC/giphy.gif",
-  "https://media.giphy.com/media/xTk9ZY0C9ZWM2NgmCA/giphy.gif",
-  "https://media.giphy.com/media/Cmr1OMJ2FN0B2/giphy.gif",
-  "https://media.giphy.com/media/ZgTRcH0SbiLV1wolnR/giphy.gif",
+  "awk.gif",
+  "obi.gif",
+  "bear.gif",
+  "cartoon.gif",
+  "minion.gif",
+  "omellete.gif",
+  "pig.gif",
 ];
 
 const greetings = {
@@ -21,27 +25,33 @@ const greetings = {
   portugese: ["Olá ", "Oi!"],
 };
 const keys = Object.keys(greetings);
-let randomKey = keys[Math.floor(Math.random() * keys.length)];
+let randomKey = null;
 
 const greeting = function (rKey) {
-    if (typeof greetings[rKey] == "string") {
-      return greetings[rKey];
-    } else {
-      return greetings[rKey][Math.floor(Math.random() * greetings[rKey].length)];
-    }
+  if (typeof greetings[rKey] == "string") {
+    return greetings[rKey];
+  } else {
+    return greetings[rKey][Math.floor(Math.random() * greetings[rKey].length)];
   }
+};
 
 module.exports = {
   name: "hello",
-  aliases: ["hi"],
+  aliases: ["hi", "ahoy", "hii", "ciao", "hola"],
   description: "Greet users",
   execute(message, args) {
     let randomGreeting = null;
     if (!args.length) {
-      console.log(randomKey);
+      randomKey = keys[Math.floor(Math.random() * keys.length)];
       randomGreeting = greeting(randomKey);
       message.channel.send({
-        files: [helloGif[Math.floor(Math.random() * helloGif.length)]],
+        files: [
+          path.join(
+            __dirname,
+            "../assets/images",
+            helloGif[Math.floor(Math.random() * helloGif.length)]
+          ),
+        ],
       });
       message.channel.send(`${randomGreeting} <@${message.author.id}>`);
     } else {
@@ -52,12 +62,17 @@ module.exports = {
       ) {
         randomGreeting = greeting(args[0]);
         message.channel.send({
-          files: [helloGif[Math.floor(Math.random() * helloGif.length)]],
+          files: [
+            path.join(
+              __dirname,
+              "../assets/images",
+              helloGif[Math.floor(Math.random() * helloGif.length)]
+            ),
+          ],
         });
         message.channel.send(`${randomGreeting} <@${message.author.id}>`);
-      }
-      else {
-        message.channel.send("Please enter a valid language.")
+      } else {
+        message.channel.send("Please enter a valid language.");
       }
     }
   },
