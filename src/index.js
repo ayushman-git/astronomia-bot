@@ -24,6 +24,9 @@ client.once("ready", () => {
 });
 
 client.on("message", (msg) => {
+  if (msg.content === '!join') {
+		client.emit('guildMemberAdd', msg.member);
+	}
   if (!msg.content.startsWith(PREFIX) || msg.author.bot) return;
   const [CMD_NAME, ...args] = msg.content
     .trim()
@@ -44,6 +47,10 @@ client.on("message", (msg) => {
     msg.reply("There was an error.");
   }
 });
+
+client.on('guildMemberAdd', (msg) => {
+  console.log(msg)
+})
 
 client.on("messageReactionAdd", (reaction, user) => {
   // console.log(reaction);
