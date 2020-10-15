@@ -1,32 +1,46 @@
 const { Client, Collection } = require("discord.js");
 const fs = require("fs");
 const path = require("path");
-const { messageId } = require("./commands/apod");
-
 require("dotenv").config();
 const PREFIX = ".";
-
 const client = new Client({
-  partials: ['MESSAGE', 'REACTION']
+  partials: ["MESSAGE", "REACTION"],
 });
 client.commands = new Collection();
+client.autos = new Collection();
+
+//array of auto scripts
+const autoScripts = fs
+  .readdirSync(path.join(__dirname, "autos"))
+  .filter((file) => file.endsWith(".js"));
+
+//array of commands
 const commandFiles = fs
   .readdirSync(path.join(__dirname, "commands"))
   .filter((file) => file.endsWith(".js"));
 
+//Creating collection of commands
 for (const file of commandFiles) {
   const command = require(`./commands/${file}`);
   client.commands.set(command.name, command);
 }
 
+//Creating collection of scripts
+for (const file of autoScripts) {
+  const auto = require(`./autos/${file}`);
+  client.autos.set(auto.name, auto);
+}
+
+//Bot is online
 client.once("ready", () => {
   console.log(`Logged in as ${client.user.tag}`);
 });
 
+
 client.on("message", (msg) => {
-  if (msg.content === '!join') {
-		client.emit('guildMemberAdd', msg.member);
-	}
+  if (msg.content === "!join") {
+    client.emit("guildMemberAdd", msg);
+  }
   if (!msg.content.startsWith(PREFIX) || msg.author.bot) return;
   const [CMD_NAME, ...args] = msg.content
     .trim()
@@ -48,13 +62,9 @@ client.on("message", (msg) => {
   }
 });
 
-client.on('guildMemberAdd', (msg) => {
-  console.log(msg)
-})
+client.on("guildMemberAdd", (msg) => {
+  client.autos.get('welcome').execute(msg);
+});
 
-client.on("messageReactionAdd", (reaction, user) => {
-  // console.log(reaction);
-  // console.log(user);
-})
 
 client.login(process.env.DISCORD_BOT_TOKEN);
