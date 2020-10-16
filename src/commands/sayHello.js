@@ -27,19 +27,20 @@ const greetings = {
 const keys = Object.keys(greetings);
 let randomKey = null;
 
-const greeting = function (rKey) {
-  if (typeof greetings[rKey] == "string") {
-    return greetings[rKey];
-  } else {
-    return greetings[rKey][Math.floor(Math.random() * greetings[rKey].length)];
-  }
-};
-
 module.exports = {
   name: "hello",
   aliases: ["hi", "ahoy", "hii", "ciao", "hola"],
   description: "Greet users",
   execute(message, args) {
+    const greeting = function (rKey) {
+      if (typeof greetings[rKey] == "string") {
+        return greetings[rKey];
+      } else {
+        return greetings[rKey][
+          Math.floor(Math.random() * greetings[rKey].length)
+        ];
+      }
+    };
     let randomGreeting = null;
     if (!args.length) {
       randomKey = keys[Math.floor(Math.random() * keys.length)];
