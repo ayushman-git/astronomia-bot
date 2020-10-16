@@ -11,10 +11,11 @@ module.exports = {
   name: "explore",
   aliases: ["e"],
   description: "Explore universe",
-  execute(message, args) {
+  async execute(message, args) {
     if (!args[0]) {
       message.channel.send("Please enter celestial obbject's name.");
     } else {
+      const gen = await message.channel.send("Generating...");
       axios
         .get("https://api.le-systeme-solaire.net/rest/bodies/" + args[0])
         .then((res) => {
@@ -94,6 +95,9 @@ module.exports = {
           }
           message.channel.send(celestialObject);
         });
+      setTimeout(() => {
+        gen.delete();
+      }, 1000);
     }
   },
 };

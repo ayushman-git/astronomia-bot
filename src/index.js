@@ -34,6 +34,7 @@ for (const file of autoScripts) {
 //Bot is online
 client.once("ready", () => {
   console.log(`Logged in as ${client.user.tag}`);
+  client.autos.get('changeActivity').execute(client);
 });
 
 
@@ -65,6 +66,11 @@ client.on("message", (msg) => {
 client.on("guildMemberAdd", (msg) => {
   client.autos.get('welcome').execute(msg);
 });
+
+
+setInterval(() => {
+  client.autos.get('changeActivity').execute(client);
+}, 300000);
 
 
 client.login(process.env.DISCORD_BOT_TOKEN);
