@@ -62,7 +62,7 @@ module.exports = {
           });
         setTimeout(() => {
           gen.delete();
-        }, 1000);
+        }, 3000);
       }
     })();
   },
