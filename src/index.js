@@ -63,11 +63,6 @@ client.on("message", (msg) => {
   }
 });
 
-client.on("guildMemberAdd", (msg) => {
-  client.autos.get('welcome').execute(msg);
-});
-
-
 setInterval(() => {
   client.autos.get('changeActivity').execute(client);
 }, 300000);
