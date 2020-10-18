@@ -1257,11 +1257,6 @@ module.exports = [
   },
   {
     content:
-      "Spindelvævlette, verdenshavtunge fjerner\nsprænger i dragsug menneskesjæle og stjerner -\nintet har form eller navn.\nSe, jeg er stille - se, jeg er rum og susning,\nse, jeg er aften efter en brændende dag.\nJeg er alt, og alt er i mig, og mit hjerte\nfølger i døende rytmer tidernes aandedrag.",
-    author: "Peter Wessel Zapffe",
-  },
-  {
-    content:
       "Majority of people find that nature is anything that walks and grows on planet Earth, astronomers have found that this nature stretches way beyond our atmosphere as far as we can see in to the Universe.",
     author: "Michel Reitsma",
   },
@@ -1284,11 +1279,6 @@ module.exports = [
     content:
       "Did you know that the Russians sent dogs into space? My mother told me this when I was a boy. Nobody knew the effects of space on a body, you see, so they sent dogs first. They found two little mongrels on the streets of Moscow. Pchelka, which means Little Bee, and Mushka, which means Little Fly. They went up in Sputnik 6. They were supposed to get into orbit and come right back. But the rockets misfired and shot them into space.\n\nWhenever I look at the night sky, I think about those dogs. Wearing these hand-stitched spacesuits, bright orange, with their paws sticking out. Big fishbowl helmets. How… crazy. Floating out and out into space. How bewildered they must have been, dying from oxygen deprivation. For what? They would have happily spent their days rummaging through trashcans.\n\nFor all anyone knows these dogs are still out there. Two dead mongrels in a satellite. Two dog skeletons in silly spacesuits. Gleaming dog skulls inside fishbowl helmets. They’ll spin through the universe until they burn up in the atmosphere of an uncharted planet. Or get sucked into a black hole to be crushed into a ball of black matter no bigger than an ant turd.",
     author: "Craig Davidson",
-  },
-  {
-    content:
-      "Timer - timer i fjeldene. I mørke kan hænde, i uveir og kamp -\nOg de lyse, ugripelige, de av forfærdelig skjønhet. Dem du nødig nævner, og aldri kan dele med nogen, fordi de tilhører din sjæls ytterste ensomhet.",
-    author: "Peter Wessel Zapffe",
   },
   {
     content:
