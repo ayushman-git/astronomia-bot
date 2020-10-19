@@ -56,7 +56,7 @@ module.exports = {
               Math.random() * res.data.wallpapers.length
             );
              message.channel.send({
-              files: ["https://images.wallpaperscraft.com/image/planet_space_flare_169160_1920x1080.jpg"],
+              files: [res.data.wallpapers[randomImage].url_image],
             });
           });
         setTimeout(() => {
