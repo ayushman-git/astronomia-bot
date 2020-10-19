@@ -45,6 +45,17 @@ const embed = new MessageEmbed()
     },
     { name: "\u200B", value: "\u200B" },
     {
+      name: "Quotation",
+      value: ".quotes\n.q",
+      inline: true,
+    },
+    {
+      name: "🍰",
+      value: "Displays a random quote about cosmos.",
+      inline: true,
+    },
+    { name: "\u200B", value: "\u200B" },
+    {
       name: "Explore",
       value: ".explore \u200B <object>\n.e \u200B <object>",
       inline: true,
@@ -69,7 +80,7 @@ const embed = new MessageEmbed()
     { name: "\u200B", value: "\u200B" },
     {
       name: "Wallpapers",
-      value: ".wallpapers\n.w\n.w \u200B <realistic>",
+      value: ".wallpapers\n.w\n.w \u200B *realistic*",
       inline: true,
     },
     {

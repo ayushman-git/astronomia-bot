@@ -51,12 +51,11 @@ module.exports = {
           .get(
             `https://wall.alphacoders.com/api2.0/get.php?auth=${process.env.WALLPAPER_API_KEY}&method=search&term=space&page=${randomPage}`
           )
-          .then((res) => {
-            const randomImage = Math.floor(
+          .then(async(res) => {
+            const randomImage = await Math.floor(
               Math.random() * res.data.wallpapers.length
             );
-            console.log(randomImage, randomPage)
-            message.channel.send({
+            await message.channel.send({
               files: [res.data.wallpapers[randomImage].url_image],
             });
           });
