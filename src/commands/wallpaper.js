@@ -51,12 +51,12 @@ module.exports = {
           .get(
             `https://wall.alphacoders.com/api2.0/get.php?auth=${process.env.WALLPAPER_API_KEY}&method=search&term=space&page=${randomPage}`
           )
-          .then(async(res) => {
-            const randomImage = await Math.floor(
+          .then((res) => {
+            const randomImage =  Math.floor(
               Math.random() * res.data.wallpapers.length
             );
-            await message.channel.send({
-              files: [res.data.wallpapers[randomImage].url_image],
+             message.channel.send({
+              files: ["https://images.wallpaperscraft.com/image/planet_space_flare_169160_1920x1080.jpg"],
             });
           });
         setTimeout(() => {
