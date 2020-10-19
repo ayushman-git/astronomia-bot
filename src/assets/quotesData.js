@@ -230,29 +230,13 @@ module.exports = [
   },
   {
     content:
-      "The gnostic is Muslim in that his whole being is surrendered to God; he has no separate individual existence of his own. He is like the birds and the flowers in his yielding to the Creator; like them, like all the elements of the cosmos, he reflects the Divine to his own degree. He reflects it actively, however, they passively; his participation is a conscious one.",
-    author: "Seyyed Hossein Nasr",
-  },
-  {
-    content:
       "Perfection itself is a flaw, an odd knot in the cosmic fabric of evenly-braided imperfections.",
     author: "Khayri R.R. Woulfe",
   },
-  { content: "The “pale blue dot", author: "Ann Druyan" },
   {
     content:
       "One must keep one's eyes and ears open, one must know how to match up the facts, see similarity where others see total difference, remember that certain events occur at various levels or, to put it another way, many incidents are aspects of the same, single occurrence. And that the world is a great big net, it is a whole, where no single thing exists separately; every scrap of the world, every last tiny piece, is bound up with the rest by a complex Cosmos of correspondences, hard for the ordinary mind to penetrate.",
     author: "Olga Tokarczuk",
-  },
-  {
-    content:
-      "Efter midnat, naar epidemien har sejret totalt, og byen med alle sine senge er de søvnsyges hospital,\n\nDer kan leves i disse timer inden morgengryet, men ingen tænker på det, alle sover.",
-    author: "Ole Sarvig",
-  },
-  {
-    content:
-      "Todo lo que hemos visto forma parte de un universo inmenso, complicado y maravilloso.",
-    author: "Carl Sagan",
   },
   {
     content:
@@ -266,11 +250,6 @@ module.exports = [
   },
   {
     content:
-      "Es apasionante darnos cuenta de que, al igual que nosotros, las estrellas, las galaxias y el mismo universo son dinámicos y cambiantes, y evolucionan a su propio ritmo y manera, y de que la mente humana sea capaz, desde su limitado espacio y durante su corto transcurso, de preguntarle y arrancarle al universo un puñado de sus más íntimos secretos.",
-    author: "Deborah Dultzin",
-  },
-  {
-    content:
       "Science, like love, is a means to that transcendence, to that soaring experience of the oneness of being fully alive. The scientific approach to nature and my understanding of love are the same: Love asks us to get beyond the infantile projections of our personal hopes and fears, to embrace the other’s reality. This kind of unflinching love never stops daring to go deeper, to reach higher.\nThis is precisely the way that science loves nature. This lack of a final destination, an absolute truth, is what makes science such a worthy methodology for sacred searching. It is a never ending lesson in humility. The vastness of the universe—and love, the thing that makes the vastness bearable—is out of reach to the arrogant. This cosmos only fully admits those who listen carefully for the inner voice reminding us to remember we might be wrong. What’s real must matter more to us than what we wish to believe. But how do we tell the difference?\nI know a way to part the curtains of darkness that prevent us from having a complete experience of nature. Here it is, the basic rules of the road for science: Test ideas by experiment and observation. Build on those ideas that pass the test. Reject the ones that fail. Follow the evidence wherever it leads. And question everything, including authority. Do these things and the cosmos is yours.",
     author: "Ann Druyan",
   },
@@ -278,11 +257,6 @@ module.exports = [
     content:
       "A native is a man or creature or plant indigenous to a limited geographical area - a space boundaried and defined by mountains, rivers, or coastline (not by latitudes, longitudes, or state and county lines), with its own peculiar mixture of weeds, trees, bugs, birds, flowers, streams, hills, rocks, and critters (including people), its own nuances of rain, wind, and seasonal change. Native intelligence develops through an unspoken or soft spoken relationship with these interwoven things: it evolves as the native involves himself in his region. A non-native awakes in the morning in a body in a bed in a room in a building on a street in a county in a state in a nation. A native awakes in the in the center of a little cosmos - or a big one, if his intelligence is vast - and he wears this cosmos like a robe, senses the barely perceptible shiftings, migrations, moods, and machinations of its creatures, its growing green things, its earth and sky. Native intelligence is what Huck Finn had rafting the Mississippi, what Thoreau had by his pond, what Kerouac had in Desolation Lookout and lost entirely the instant he caught a whiff of any city. But some have it in cities - like the Artful Dodger, picking his way through a crowd of London pockets; like Mother Teresa in the Calcutta slums. Sissy Hankshaw had it on freeways, Woody Guthrie in crowds of fruit pickers, Ghandi in jails. Almost everybody has a dab of it wherever he or she feels most at home..",
     author: "David James Duncan",
-  },
-  {
-    content:
-      "La naturaleza ordenó esos átomos de manera maravillosa en moléculas y células, creando finalmente un prodigio: el hombre, un ser capaz de plantearse la pregunta de cuál es su lugar en el Universo.",
-    author: "Deborah Dultzin",
   },
   {
     content:
@@ -315,36 +289,11 @@ module.exports = [
       "Can you imagine the number of events and choices that had to occur since the birth of the Universe leading to the making of you (or anyone for that matter) just exactly the way you are! So, you, me and each one of the several billion humans is as special, in our own way!",
     author: "Mohith Agadi",
   },
-  {
-    content:
-      "XIX. yüzyılda buharlı gemi yapımına girişilince, denizlere hiç de hayırlı olmayan bir çevre kirliliği işareti ulaştı: gürültü. Ticari ve askeri gemilerin daha da çoğalmasıyla okyanuslara yayılan gürültü (özellikle yirmi Hertz frekansında) kulak ardı edilemez duruma geldi. Okyanuslararası haberleşme girişimini yürüten balinalar için anlaşmak giderek zorlaştı. Haberleşme giderek kısa mesafelere indi. İki yüzyıl önce Finback denen balina türünün anlaşması 10.000 km uzaktan mümkün olurken, şimdi bu mesafe birkaç yüz kilometreye inmiş olabilir. Balinalar birbirlerini isimleriyle mi çağırırlar? Yalnızca ses yoluyla birbirlerini tanıyabilirler mi? Balinaların haberleşme olanaklarını kestik. Milyonlarca yıl haberleşebilen yaratıkları şimdi susturduk.",
-    author: "Carl Sagan",
-  },
-  {
-    content:
-      "İtiraf etmeliyim ki, karbona şoven denecek derecede gönül vermiş biriyim. Kozmos'ta karbon bolluğu vardır ve karbon hayat için gerekli olan inanılmayacak kadar karmaşık moleküller meydana getirir. Ben aynı zamanda, suya da şoven denecek derecede gönül vermiş biriyimdir. Su, organik kimya çalışmalarını mümkün klan ve bazı ısı derecelerinde sıvı kalabilen ideal bir çözücü oluşturur.\nBazen düşünüyorum da, acaba diyorum, benim bu maddelere karşı olan aşırı bağımlılığım, temelde bu maddelerden meydana gelmemden kaynaklanıyor olmasın? Yerküremizin oluşumu sırasında bu maddeler çok bol olduğundan ötürü müdür yapımızın temelinde karbon ve su bulunuşunun nedeni? Başka bir yerde, örneğin Mars'ta hayatın temeli başka maddelerden mi oluşmuştur?Ben su, kalsiyum ve organik moleküller koleksiyonundan oluşan Carl Sagan adlı biriyim. Sizse hemen aynı moleküller koleksiyonundan oluşmuş değişik kollektif etiketli birisiniz. Ama durum yalnızca bundan mı ibarettir? Bizde molekülden başka bir şey bulunmaz mı? Bazı kişiler bu durumu insan haysiyet ve gururunu küçültücü bulabilir. Ben kendi hesabıma, evrenin, bizim kadar karmaşık ve hassas dengeli molekül makinelerinin gelişimine olanak sağlaması açısından gurur verici buluyorum.",
-    author: "Carl Sagan",
-  },
   { content: "Nothing can explain God and Gravity", author: "Dido Stargaze" },
   {
     content:
       "My natural hair it always flows like\ngolden crowns made from cosmos.",
     author: "Rain Cooper",
-  },
-  {
-    content:
-      "Arjuna,\nthe lord of all beings\ndwells in the place\nof the heart,\nand causes all beings\nto wander in illusion,\nas if following\na great cosmic map.",
-    author: "Laurie L. Patton",
-  },
-  {
-    content:
-      "Love is the cosmos, how deeper you see how deeper you go in. If you do not concentrate to: you lose it. If you do, you have it forever.",
-    author: "Ehsan Sehgal",
-  },
-  {
-    content:
-      "Al centrar las imágenes cósmicas del Hijo del Hombre (Daniel y Cristo) en una persona, en una persona actualmente presente y conocida, el contexto cósmico se convierte en algo secundario, y también la cuestión cronológica pierde importancia: en el desarrollo de las cosas físicamente mensurables, la persona «es», tiene su «tiempo» propio, «permanece». Esta relativización de lo cósmico, o mejor, su concentración en lo personal, se muestra con especial claridad en la palabra final de la parte apocalíptica: «El cielo y la tierra pasarán, mis palabras no pasarán» (Mc 13,31). La palabra, casi nada en comparación con el enorme poder del inmenso cosmos material, un soplo del momento en la magnitud silenciosa del universo, es más real y más duradera que todo el mundo material. Es la realidad verdadera y fiable, el terreno sólido sobre el que podemos apoyarnos y que resiste incluso al oscurecerse del sol y al derrumbe del firmamento. Los elementos cósmicos pasan; la palabra de Jesús es el verdadero «firmamento» bajo el cual el hombre puede estar y permanecer.",
-    author: "Benedict XVI",
   },
   {
     content:
@@ -376,31 +325,10 @@ module.exports = [
       "They tell us not to follow the stars and that it is blasphemous but the same people tell us the story of Three Wise Men that found the Son of Suns by following the same stars.\n\nWe should learn that following those tiny lights that protest total darkness and smile at the moon no matter her mood, is the route to sunrise. Those lights are the seedlings of your own faith in tomorrow...\n\n(Screenplay)",
     author: "Nicole Bonomi",
   },
-  { content: "Do you promise to watch over me?", author: "Dipa Sanatani" },
-  {
-    content:
-      "Las personas son palabras.\nY así uno no es si no es diálogo.\n...\nLas personas son diálogo, digo,\nsi no sus palabras no tocarían nada,\ncomo ondas en el cosmos no captadas por ningún radio,\ncomo comunicaciones a planetas deshabitados,\no gritar en el vacío lunar\no llamar por teléfono a una casa sin nadie.\n(La persona sola no existe.)\nTe repito, mi amor:\nYo soy tú y tú eres yo.\nYo soy: amor.",
-    author: "Ernesto Cardenal",
-  },
-  {
-    content:
-      "Ptolemy's massive compendium of mathematical and astronomical calculations had been rediscovered in 1410, after centuries of neglect. The revival of classical learning pushed aside medieval notions of the world based on a literal--yet magical--interpretation of the Bible, but even though Ptolemy's rigorous approach to mathematics was more sophisticated than monkish fantasies of the cosmos, his depiction of the globe contained significant gaps and errors. Following Ptolemy's example, European cosmologists disregarded the Pacific Ocean, which covers a third of the world's surface, from their maps, and they presented incomplete renditions of the American continent based on reports and rumors rather than direct observations. Ptolemy's omissions inadvertently encouraged exploration because he made the world seem smaller and more navigable than it really was. If he had correctly estimated the size of the world, the Age of Discovery might have never ocurred.",
-    author: "Laurence Bergreen",
-  },
   {
     content:
       "The cosmos is full beyond measure of elegant truths; of exquisite interrelationships; of the awesome machinery of nature. The surface of the Earth is the shore of the cosmic ocean. On this shore we've learned most of what we know. Recently we've waded a little way out, maybe ankle deep, and the water seems inviting. Some part of our being knows this is where we came from. We long to return. And we can. Because the cosmos is also within us. We're made of star-stuff. We are a way for the cosmos to know itself.",
     author: "Carl Sagan",
-  },
-  {
-    content:
-      "Existe una tendencia general a considerar, en el lenguaje de la calle, que hay una cierta graduación en la fiabilidad de las teorías y modelos en función del nombre que se les asigna. Así, un -principio- o una -ley- serían certezas científicas prácticamente absolutas, una -teoría- tendría una fiabilidad moderada, y un -modelo- sería poco más que un experimento mental o un juego académico. De esta forma, los proponentes de ideas alternativas afirman que -el modelo del Big Bang es sólo un modelo-, o que -la teoría de la Evolución de Darwin es sólo una teoría-, mientras que casi nadie osa oponerse al -Primer Principio de la Termodinámica- o a la -Ley de la Gravitación Universal-.",
-    author: "Alberto Fernández Soto",
-  },
-  {
-    content:
-      "El modelo del origen del Universo que conocemos como Gran Explosión ha pasado en menos de 100 años de ser una creación casi puramente intelectual a constituir uno de los modelos básicos que los físicos tienen para entender todo lo que observan a su alrededor.",
-    author: "Alberto Fernández Soto",
   },
   {
     content:
@@ -416,11 +344,6 @@ module.exports = [
     content:
       "I hope to establish my faith and let the eyes of the world gaze upon its beauty, but beyond that, nothing else do I desire.",
     author: "Cometan",
-  },
-  {
-    content:
-      "Nuestro medio ambiente terrestre es, en gran parte, producto del Universo en el que vivimos.",
-    author: "John Gribbin",
   },
   {
     content:
@@ -585,11 +508,6 @@ module.exports = [
   },
   {
     content:
-      "Yoga means connection – connection with the cosmos that transcends the limited self.",
-    author: "Amit Ray",
-  },
-  {
-    content:
       "Yoga is establishing connection with the every cell of the body and with every soul of the cosmos.",
     author: "Amit Ray",
   },
@@ -606,10 +524,6 @@ module.exports = [
   {
     content:
       "That what cannot be expressed in words but is felt with the heart holds all in its warm embrace. This is our true nature as it unites us all. It is Love.",
-    author: "Wald Wassermann",
-  },
-  {
-    content: "Rest assured that all is good this godly good One brotherhood.",
     author: "Wald Wassermann",
   },
   {
@@ -790,28 +704,8 @@ module.exports = [
   },
   {
     content:
-      "En la dimensión del cosmos y en el trayecto de la historia somos insignificantes, después de nuestra muerte todo sigue igual, como si jamás hubiéramos existido, en la medida de nuestra precaria humanidad tú, Paula, eres para mí más importante que mi propia vida y que la suma de casi todas las vidas ajenas.",
-    author: "Isabel Allende",
-  },
-  {
-    content:
       "Love is, as like the cosmos, how deeper you see that how deeper you go with it. If you don't concentrate, you lose it. If you do, you have it forever.",
     author: "Ehsan Sehgal",
-  },
-  {
-    content:
-      "Em uma das muitas reflexões que tenho em noites de insônia, é se nesse imenso cosmos também tem alguém admirando o universo e se perguntando...\n‘’ Será que eu sou o único acordado?",
-    author: "Gerson De Rodrigues",
-  },
-  {
-    content:
-      "O Niilista flerta com o suicídio e se deita\nCom a morte e em sonhos lúcidos de reflexões\nFilosóficas, Se vê afogado em um oceano de conhecimento,\nE sufocado em uma overdose de solidão, Então o Niilista abraça\nO nada e deita-se sozinho contemplando sua insignificância\nPerante o cosmos",
-    author: "Gerson De Rodrigues",
-  },
-  {
-    content:
-      "propongo un nombre propio para el Cosmos: el Universo Antrópico. Porque (...) los seres humanos sí vivimos, después de todo, en el centro del Universo.",
-    author: "Nordstelo",
   },
   {
     content:
@@ -946,11 +840,6 @@ module.exports = [
   },
   {
     content:
-      "Todo mundo tem um pouco de Sol e Lua. Todo mundo tem um pouco de homem, mulher e animal. Escuridões e luzes. Todo mundo é parte conectada de um sistema cósmico. Parte terra e mar, vento e fogo, com um pouco de sal e pó nadando entre eles. Temos um universo dentro de nós mesmos que imita o universo lá fora. Nenhum de nós está apenas preto ou branco, ou nunca errado e sempre certo. Ninguém. Ninguém existe sem polaridades. Todo mundo tem forças boas e más trabalhando com eles, contra eles e dentro deles.",
-    author: "Suzy Kassem",
-  },
-  {
-    content:
       "The best way to understand life is to understand one’s own perspective towards life and rise above it. You have the higher intelligence in you, that allows you to perceive life, beyond an individuals perspective.",
     author: "Roshan Sharma",
   },
@@ -958,11 +847,6 @@ module.exports = [
     content:
       "But in all that suffering, the most painful suffering of all was the consciousness that it was banal, had all been discovered a long time ago, and was known to all the generations past, all just a repeated series, stamped out by our genes, That the universe was filled to its edges groans as alike as two notes, that those particular groans formed one great groan similar to the shrill parliament of the sparrows and that groan became an interstellar roar, the inaudible groan of the aging cosmos.",
     author: "Tadeusz Konwicki",
-  },
-  {
-    content:
-      "Current research in any field of Science has not yet reached the point where we could start exploring the existential question regarding God as a Supreme Entity driving causality in the universe. However, as modern Neuroscience progresses further and gets more advanced, we shall get to dive deeper into the physiological processes underneath the Qualia of God in human mind. What we have seen so far through our studies in Neurotheology, is that it is not God himself/herself/itself, rather it is people’s perception of God that influences the human life. The Qualia of God impact all aspects of human life by altering the body chemistry at a cellular level.",
-    author: "Abhijit Naskar",
   },
   {
     content:
@@ -1071,11 +955,6 @@ module.exports = [
   },
   {
     content:
-      "Hmm. I think love is about loving all things, to treat each and every thing and every one as a sovereign being that’s free to make its own choices.",
-    author: "Michael Sanders",
-  },
-  {
-    content:
       "The human condition is essentially the conflict between the human need for control and a universe that provides little if any of it. Once we accept this and get into the flow of life, we are free and, paradoxically, able to get better results.",
     author: "Oli Anderson",
   },
@@ -1109,11 +988,6 @@ module.exports = [
   },
   {
     content:
-      "You must know, the day your star exploded into my universe, you altered it all. You exposed my light and my dark, settled into my existence and there you will be and glow in the matter of my heart, long after light is only a memory. You have changed things for always.",
-    author: "Jennifer DeLucy",
-  },
-  {
-    content:
       "Scatter the names of all those who have ever lived over the surface of the knowable cosmos, and it would remain, for all purposes, as unnamed as it was before the small, anomalous flicker of human life appeared on this small, wildly atypical planet.",
     author: "Marilynne Robinson",
   },
@@ -1126,11 +1000,6 @@ module.exports = [
     content:
       "When you are watching the universe, you are watching yourself! Wherever you visit in the universe, you visit yourself!",
     author: "Mehmet Murat ildan",
-  },
-  {
-    content:
-      'Did he know that God loved him from the foundations of the earth? With a power far exceeding the immensity of the cosmos, He turned all His attention to creating that man and declared, "You are My child. I love you.',
-    author: "Nabeel Qureshi",
   },
   {
     content:
@@ -1237,10 +1106,6 @@ module.exports = [
     author: "Erol Ozan",
   },
   {
-    content: "Maisha ni kitu cha ajabu kuliko vyote ulimwenguni.",
-    author: "Enock Maregesi",
-  },
-  {
     content:
       "If the whole world shared such experiences, we would then have common dreams and everybody could begin thinking about tomorrow. And if everybody thinks about tomorrow, then someday we can visit the sky together.",
     author: "Neil deGrasse Tyson",
@@ -1257,17 +1122,12 @@ module.exports = [
   },
   {
     content:
-      "Spindelvævlette, verdenshavtunge fjerner\nsprænger i dragsug menneskesjæle og stjerner -\nintet har form eller navn.\nSe, jeg er stille - se, jeg er rum og susning,\nse, jeg er aften efter en brændende dag.\nJeg er alt, og alt er i mig, og mit hjerte\nfølger i døende rytmer tidernes aandedrag.",
-    author: "Peter Wessel Zapffe",
-  },
-  {
-    content:
       "Majority of people find that nature is anything that walks and grows on planet Earth, astronomers have found that this nature stretches way beyond our atmosphere as far as we can see in to the Universe.",
     author: "Michel Reitsma",
   },
   {
     content:
-      'all hopes there, so close to each other,\nare pulled into the void every night;\nwhen a band of pale twinkles milking the way\nacross the divine breadth of sky\nwhere every heart belongs.\n- From the poem "The Universe In Blossom',
+      'All hopes there, so close to each other,\nare pulled into the void every night;\nwhen a band of pale twinkles milking the way\nacross the divine breadth of sky\nwhere every heart belongs.\n- From the poem "The Universe In Blossom',
     author: "Munia Khan",
   },
   {
@@ -1284,11 +1144,6 @@ module.exports = [
     content:
       "Did you know that the Russians sent dogs into space? My mother told me this when I was a boy. Nobody knew the effects of space on a body, you see, so they sent dogs first. They found two little mongrels on the streets of Moscow. Pchelka, which means Little Bee, and Mushka, which means Little Fly. They went up in Sputnik 6. They were supposed to get into orbit and come right back. But the rockets misfired and shot them into space.\n\nWhenever I look at the night sky, I think about those dogs. Wearing these hand-stitched spacesuits, bright orange, with their paws sticking out. Big fishbowl helmets. How… crazy. Floating out and out into space. How bewildered they must have been, dying from oxygen deprivation. For what? They would have happily spent their days rummaging through trashcans.\n\nFor all anyone knows these dogs are still out there. Two dead mongrels in a satellite. Two dog skeletons in silly spacesuits. Gleaming dog skulls inside fishbowl helmets. They’ll spin through the universe until they burn up in the atmosphere of an uncharted planet. Or get sucked into a black hole to be crushed into a ball of black matter no bigger than an ant turd.",
     author: "Craig Davidson",
-  },
-  {
-    content:
-      "Timer - timer i fjeldene. I mørke kan hænde, i uveir og kamp -\nOg de lyse, ugripelige, de av forfærdelig skjønhet. Dem du nødig nævner, og aldri kan dele med nogen, fordi de tilhører din sjæls ytterste ensomhet.",
-    author: "Peter Wessel Zapffe",
   },
   {
     content:
@@ -1338,7 +1193,7 @@ module.exports = [
     content:
       "The great cognitive shift is an expansion of consciousness from the perspectival form contained in the lives of particular creatures to an objective, world-encompassing form that exists both individually and intersubjectively. It was originally a biological evolutionary process, and in our species it has become a collective cultural process as well. Each of our lives is a part of the lengthy process of the universe gradually waking up and becoming aware of itself.",
     author:
-      "Thomas Nagel Professor of Philosophy and Law at the School of Law New York University",
+      "Thomas Nagel",
   },
   {
     content:
