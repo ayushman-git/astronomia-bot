@@ -13,7 +13,7 @@ module.exports = {
   description: "Download space wallpapers.",
   execute(message, args) {
     (async () => {
-      if (args[0] === "realistic") {
+      if (args[0] === "real") {
         const randomPage = Math.floor(Math.random() * 10);
         const randomImage = Math.floor(Math.random() * 14);
         axios
