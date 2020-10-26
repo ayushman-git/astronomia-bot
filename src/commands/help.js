@@ -88,6 +88,11 @@ const embed = new MessageEmbed()
       value: "Displays wallpaper.\n\nDisplays realistic wallpaper.",
       inline: true,
     },
+    {
+      name: "❤",
+      value: "If you want latest news regarding space, create a text channel named **astronomia**",
+      inline: false,
+    },
   )
   .setTimestamp()
   .setFooter(
