@@ -68,7 +68,7 @@ setInterval(() => {
 }, 300000);
 
 setInterval(() => {
-  client.autos.get('getHubbleNews').execute(client);
+  client.autos.get('getPlanetaryNews').execute(client);
 }, 120000);
 
 
