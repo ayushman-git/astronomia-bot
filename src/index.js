@@ -69,6 +69,6 @@ setInterval(() => {
 
 setInterval(() => {
   client.autos.get("getNews").execute(client);
-}, 120000);
+}, 3600000);
 
 client.login(process.env.DISCORD_BOT_TOKEN);
