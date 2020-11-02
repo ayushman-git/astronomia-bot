@@ -19,7 +19,6 @@ module.exports = {
       axios
         .get("https://api.le-systeme-solaire.net/rest/bodies/" + args[0])
         .then((res) => {
-          console.log(res);
           const celestialObject = new MessageEmbed()
             .setColor("#F0386B")
             .setTitle(

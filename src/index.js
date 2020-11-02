@@ -34,9 +34,8 @@ for (const file of autoScripts) {
 //Bot is online
 client.once("ready", () => {
   console.log(`Logged in as ${client.user.tag}`);
-  client.autos.get('changeActivity').execute(client);
+  client.autos.get("changeActivity").execute(client);
 });
-
 
 client.on("message", (msg) => {
   if (msg.content === "!join") {
@@ -63,13 +62,13 @@ client.on("message", (msg) => {
   }
 });
 
+
 setInterval(() => {
-  client.autos.get('changeActivity').execute(client);
+  client.autos.get("changeActivity").execute(client);
 }, 300000);
 
 setInterval(() => {
-  client.autos.get('getPlanetaryNews').execute(client);
+  client.autos.get("getNews").execute(client);
 }, 120000);
-
 
 client.login(process.env.DISCORD_BOT_TOKEN);
