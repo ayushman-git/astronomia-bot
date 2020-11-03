@@ -68,7 +68,7 @@ setInterval(() => {
 }, 300000);
 
 setInterval(() => {
-  client.autos.get("getHubbleNews.js").execute(client);
+  client.autos.get("getHubbleNews").execute(client);
 }, 3600000);
 
 client.login(process.env.DISCORD_BOT_TOKEN);
