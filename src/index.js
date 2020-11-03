@@ -35,7 +35,6 @@ for (const file of autoScripts) {
 client.once("ready", () => {
   console.log(`Logged in as ${client.user.tag}`);
   client.autos.get("changeActivity").execute(client);
-  client.autos.get("apod").execute(client);
 });
 
 client.on("message", (msg) => {
@@ -69,6 +68,7 @@ setInterval(() => {
 
 setInterval(() => {
   client.autos.get("getHubbleNews").execute(client);
+  client.autos.get("apod").execute(client);
 }, 3600000);
 
 client.login(process.env.DISCORD_BOT_TOKEN);
