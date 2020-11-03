@@ -45,7 +45,6 @@ module.exports = {
   messageId: messageId,
   execute(message, args) {
     (async () => {
-      // await message.channel.send({ files: [apod.url] });
       message.channel.send(apodEmbed).then(async (msg) => {
         messageId = msg.id;
         await msg.react("❤");

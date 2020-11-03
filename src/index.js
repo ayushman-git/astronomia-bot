@@ -4,7 +4,7 @@ const path = require("path");
 require("dotenv").config();
 const PREFIX = ".";
 const client = new Client({
-  partials: ["MESSAGE", "REACTION"],
+  partials: ["MESSAGE", "CHANNEL", "REACTION"],
 });
 client.commands = new Collection();
 client.autos = new Collection();
@@ -35,6 +35,7 @@ for (const file of autoScripts) {
 client.once("ready", () => {
   console.log(`Logged in as ${client.user.tag}`);
   client.autos.get("changeActivity").execute(client);
+  client.autos.get("apod").execute(client);
 });
 
 client.on("message", (msg) => {
@@ -61,7 +62,6 @@ client.on("message", (msg) => {
     msg.reply("There was an error.");
   }
 });
-
 
 setInterval(() => {
   client.autos.get("changeActivity").execute(client);

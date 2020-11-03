@@ -80,7 +80,7 @@ const embed = new MessageEmbed()
     { name: "\u200B", value: "\u200B" },
     {
       name: "Wallpapers",
-      value: ".wallpapers\n.w\n.w \u200B *realistic*",
+      value: ".wallpapers\n.w\n.w \u200B *real*",
       inline: true,
     },
     {
