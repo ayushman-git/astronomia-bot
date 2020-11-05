@@ -26,10 +26,7 @@ module.exports = {
                 .setTitle(currentApod.title)
                 .setURL(currentApod.url)
                 .setImage(currentApod.url)
-                .setDescription(
-                  currentApod.explanation.split(" ").splice(0, 30).join(" ") +
-                    "..."
-                )
+                .setDescription(currentApod.explanation)
                 .setFooter(
                   `${publicationDate.getDate()}/${
                     publicationDate.getMonth() + 1
@@ -42,6 +39,9 @@ module.exports = {
           }
         });
         previousApod = currentApod;
+      })
+      .catch((err) => {
+        console.log(err);
       });
   },
 };

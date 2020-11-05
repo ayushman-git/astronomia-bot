@@ -38,9 +38,6 @@ client.once("ready", () => {
 });
 
 client.on("message", (msg) => {
-  if (msg.content === "!join") {
-    client.emit("guildMemberAdd", msg);
-  }
   if (!msg.content.startsWith(PREFIX) || msg.author.bot) return;
   const [CMD_NAME, ...args] = msg.content
     .trim()
