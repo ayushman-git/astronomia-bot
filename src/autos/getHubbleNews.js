@@ -24,7 +24,7 @@ module.exports = {
               (channel) => channel.name === "astronomia"
             );
             if (channel) {
-              if (JSON.stringify(currentNews) != JSON.stringify(previousNews)) {
+              if (JSON.stringify(currentNews) != previousNews) {
                 const newsDate = new Date(currentNews.publication);
                 const publicationDate = `${newsDate.getDate()}/${
                   newsDate.getMonth() + 1
