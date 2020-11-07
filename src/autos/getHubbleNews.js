@@ -1,21 +1,24 @@
 const axios = require("axios");
 const { MessageEmbed } = require("discord.js");
 
-let currentNews = null;
-let previousNews = null;
 module.exports = {
   name: "getHubbleNews",
   description:
     "Get latest news from https://hubblesite.org/api/v3/news_release/last",
-  execute(client) {
+  execute(client, db) {
     (function fetchNews() {
       axios
         .get("https://hubblesite.org/api/v3/news_release/last")
-        .then((res) => {
+        .then(async (res) => {
           if (res.status >= 400) {
             return;
           }
-          currentNews = res.data;
+          //get previous news
+          const hubbleRef = db.collection("fetchObjects").doc("hubble");
+          const doc = await hubbleRef.get();
+          const previousNews = doc.data().news;
+          const currentNews = res.data;
+          
           client.guilds.cache.forEach((server) => {
             const channel = server.channels.cache.find(
               (channel) => channel.name === "astronomia"
@@ -40,7 +43,10 @@ module.exports = {
               }
             }
           });
-          previousNews = currentNews;
+          //change previous news with current
+          await hubbleRef.set({
+            news: JSON.stringify(currentNews),
+          });
         })
         .catch((err) => {
           console.log(err);

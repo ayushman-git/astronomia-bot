@@ -1,22 +1,25 @@
 const axios = require("axios");
 const { MessageEmbed } = require("discord.js");
-let currentApod = null;
-let previousApod = null;
 
 module.exports = {
   name: "apod",
   description: "Get daily apod",
-  execute(client) {
+  execute(client, db) {
     axios
       .get(
         "https://api.nasa.gov/planetary/apod?api_key=" +
           process.env.NASA_APID_KEY
       )
-      .then((res) => {
-        if(res.status >= 400) {
+      .then(async (res) => {
+        if (res.status >= 400) {
           return;
         }
-        currentApod = res.data;
+        //get previous apod
+        const apodRef = db.collection("fetchObjects").doc("apod");
+        const doc = await apodRef.get();
+        const previousApod = doc.data().todayApod;
+        const currentApod = res.data;
+        
         client.guilds.cache.forEach((server) => {
           const channel = server.channels.cache.find(
             (channel) => channel.name === "astronomia"
@@ -35,13 +38,16 @@ module.exports = {
                     publicationDate.getMonth() + 1
                   }/${publicationDate.getFullYear()}`
                 );
-              // channel.send(apodEmbed).then(async (msg) => {
-              //   await msg.react("🛰");
-              // });
+              channel.send(apodEmbed).then(async (msg) => {
+                await msg.react("🛰");
+              });
             }
           }
         });
-        previousApod = currentApod;
+        //change previous apod with current
+        await apodRef.set({
+          news: JSON.stringify(currentApod),
+        });
       })
       .catch((err) => {
         console.log(err);
