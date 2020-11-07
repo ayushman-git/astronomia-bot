@@ -10,6 +10,9 @@ function fetchData() {
       "https://api.nasa.gov/planetary/apod?api_key=" + process.env.NASA_APID_KEY
     )
     .then((res) => {
+      if(res.status >= 400) {
+        return;
+      }
       apodData = res.data;
       apodEmbed
         .setColor("#F0386B")

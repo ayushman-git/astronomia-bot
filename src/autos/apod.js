@@ -13,6 +13,9 @@ module.exports = {
           process.env.NASA_APID_KEY
       )
       .then((res) => {
+        if(res.status >= 400) {
+          return;
+        }
         currentApod = res.data;
         client.guilds.cache.forEach((server) => {
           const channel = server.channels.cache.find(
@@ -32,9 +35,9 @@ module.exports = {
                     publicationDate.getMonth() + 1
                   }/${publicationDate.getFullYear()}`
                 );
-              channel.send(apodEmbed).then(async (msg) => {
-                await msg.react("🛰");
-              });
+              // channel.send(apodEmbed).then(async (msg) => {
+              //   await msg.react("🛰");
+              // });
             }
           }
         });

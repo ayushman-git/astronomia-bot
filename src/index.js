@@ -58,7 +58,6 @@ client.on("message", (msg) => {
     msg.reply("There was an error.");
   }
 });
-
 setInterval(() => {
   client.autos.get("changeActivity").execute(client);
 }, 300000);
