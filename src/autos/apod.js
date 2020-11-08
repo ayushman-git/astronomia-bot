@@ -49,7 +49,7 @@ module.exports = {
         });
       })
       .catch((err) => {
-        console.log(err);
+        console.log("Error in recieving apod. (Maybe APOD not uploaded yet)");
       });
   },
 };
