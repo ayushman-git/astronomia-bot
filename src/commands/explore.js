@@ -1,7 +1,7 @@
 const path = require("path");
 const axios = require("axios");
 const { MessageEmbed, MessageAttachment } = require("discord.js");
-
+const images = require("../assets/images");
 const attachment = new MessageAttachment(
   path.join(__dirname, "../assets/images/logo.png"),
   "logo.png"
@@ -91,6 +91,42 @@ module.exports = {
               value: res.data.discoveryDate,
               inline: true,
             });
+          }
+
+          if (args[0] == "moon") {
+            celestialObject
+              .setImage(images.moon)
+              .setDescription(
+                "The brightest and largest object in our night sky, the Moon makes Earth a more livable planet by moderating our home planet's wobble on its axis, leading to a relatively stable climate. It also causes tides, creating a rhythm that has guided humans for thousands of years. The Moon was likely formed after a Mars-sized body collided with Earth."
+              );
+          }
+          else if(args[0] == "sun") {
+            celestialObject
+              .setImage(images.sun)
+              .setDescription(
+                "The Sun—the heart of our solar system—is a yellow dwarf star, a hot ball of glowing gases."
+              );
+          }
+          else if(args[0] == "earth") {
+            celestialObject
+              .setImage(images.earth)
+              .setDescription(
+                "Earth is the third planet from the Sun and the only astronomical object known to harbor life. About 29% of Earth's surface is land consisting of continents and islands. The remaining 71% is covered with water, mostly by oceans but also lakes, rivers and other fresh water, which together constitute the hydrosphere."
+              );
+          }
+          else if(args[0] == "mars") {
+            celestialObject
+              .setImage(images.mars)
+              .setDescription(
+                "It is the fourth planet from the Sun. It is the next planet beyond Earth. Mars is more than 142 million miles from the Sun. The planet is about half the size of Earth."
+              );
+          }
+          else if(args[0] == "jupiter") {
+            celestialObject
+              .setImage(images.jupiter)
+              .setDescription(
+                "Jupiter has a long history surprising scientists—all the way back to 1610 when Galileo Galilei found the first moons beyond Earth. That discovery changed the way we see the universe."
+              );
           }
           message.channel.send(celestialObject);
         });
