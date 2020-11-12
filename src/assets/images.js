@@ -71,4 +71,22 @@ module.exports = {
     description:
       "Deimos is the smaller and outermost of the two natural satellites of Mars, the other being Phobos. Deimos has a mean radius of 6.2 km (3.9 mi) and takes 30.3 hours to orbit Mars. Deimos is 23,460 km (14,580 mi) from Mars, much further than Mars's other moon, Phobos. It is named after Deimos, the Ancient Greek god and personification of dread and terror, and who is also a son of Mars and twin brother of Phobos.",
   },
+  io: {
+    link:
+      "https://upload.wikimedia.org/wikipedia/commons/f/f2/Io_moon.png",
+    description:
+      "Jupiter's moon Io is the most volcanically active world in the Solar System, with hundreds of volcanoes, some erupting lava fountains dozens of miles (or kilometers) high. Io is caught in a tug-of-war between Jupiter's massive gravity and the smaller but precisely timed pulls from two neighboring moons that orbit farther from Jupiter—Europa and Ganymede.",
+  },
+  europa: {
+    link:
+      "https://firebasestorage.googleapis.com/v0/b/astronomia-c2f5d.appspot.com/o/europa.webp?alt=media&token=a3635bd0-2cb0-44ce-a3d8-119d13dabf9d",
+    description:
+      "The surface of Europa is frozen, covered with a layer of ice, but scientists think there is an ocean beneath the surface. The icy surface also makes the moon one of the most reflective in the solar system.",
+  },
+  ganymede: {
+    link:
+      "https://firebasestorage.googleapis.com/v0/b/astronomia-c2f5d.appspot.com/o/ganymede.jpg?alt=media&token=3789a670-260a-478a-a3d2-1fcce1015c38",
+    description:
+      "Ganymede, a satellite of Jupiter, is the largest and most massive of the Solar System's moons. The ninth-largest object in the Solar System, it is the largest without a substantial atmosphere.",
+  },
 };
