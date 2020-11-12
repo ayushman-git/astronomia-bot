@@ -89,4 +89,28 @@ module.exports = {
     description:
       "Ganymede, a satellite of Jupiter, is the largest and most massive of the Solar System's moons. The ninth-largest object in the Solar System, it is the largest without a substantial atmosphere.",
   },
+  callisto: {
+    link:
+      "https://firebasestorage.googleapis.com/v0/b/astronomia-c2f5d.appspot.com/o/callisto.png?alt=media&token=f5eb34dc-4614-4914-a140-0754cad7a973",
+    description:
+      "Callisto is Jupiter’s second largest moon and the third largest moon in our solar system. It’s about the same size as Mercury. In the past, some scientists thought of Callisto as a boring “ugly duckling moon” and a “hunk of rock and ice.” That’s because the crater-covered world didn’t seem to have much going on—no active volcanoes or shifting tectonic plates.",
+  },
+  thebe: {
+    link:
+      "https://upload.wikimedia.org/wikipedia/commons/1/1b/Thebe.jpg",
+    description:
+      "Thebe, also known as Jupiter XIV, is the fourth of Jupiter's moons by distance from the planet. It was discovered by Stephen P. Synnott in images from the Voyager 1 space probe taken on March 5, 1979, while making its flyby of Jupiter. In 1983, it was officially named after the mythological nymph Thebe.",
+  },
+  enceladus: {
+    link:
+      "https://firebasestorage.googleapis.com/v0/b/astronomia-c2f5d.appspot.com/o/enceladus.png?alt=media&token=ce4e973b-7e25-449d-8b09-f39fcd94db43",
+    description:
+      "Enceladus is the sixth-largest moon of Saturn. It is about 500 kilometers in diameter, about a tenth of that of Saturn's largest moon, Titan. Enceladus is mostly covered by fresh, clean ice, making it one of the most reflective bodies of the Solar System.",
+  },
+  titan: {
+    link:
+      "https://upload.wikimedia.org/wikipedia/commons/4/45/Titan_in_true_color.jpg",
+    description:
+      "Titan is the largest moon of Saturn and the second-largest natural satellite in the Solar System. It is the only moon known to have a dense atmosphere, and the only known body in space, other than Earth, where clear evidence of stable bodies of surface liquid has been found.",
+  },
 };
