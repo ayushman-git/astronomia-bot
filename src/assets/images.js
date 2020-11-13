@@ -7,7 +7,7 @@ module.exports = {
   },
   sun: {
     link:
-      "https://firebasestorage.googleapis.com/v0/b/astronomia-c2f5d.appspot.com/o/sun.png?alt=media&token=5fbe4ee9-fe34-4afd-98b1-9ea573f2368b",
+      "https://firebasestorage.googleapis.com/v0/b/astronomia-c2f5d.appspot.com/o/sun.png?alt=media&token=e3e52f7a-2e43-41ac-8f6c-254c8a81ebd3",
     description:
       "The Sun is the star at the center of the Solar System. It is a nearly perfect sphere of hot plasma, heated to incandescence by nuclear fusion reactions in its core, radiating the energy mainly as light and infrared radiation.",
   },
