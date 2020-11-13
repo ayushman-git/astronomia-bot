@@ -1,5 +1,904 @@
 module.exports = [
   {
+    link: "https://www.imdb.com/title/tt0118884/?ref_=ttls_li_tt",
+    title: "Contact",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BYWNkYmFiZjUtYmI3Ni00NzIwLTkxZjktN2ZkMjdhMzlkMDc3XkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_UY209_CR0,0,140,209_AL_.jpg",
+    rating: "7.4",
+    description:
+      "Dr. Ellie Arroway, after years of searching, finds conclusive radio proof of extraterrestrial intelligence, sending plans for a mysterious machine.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt0112384/?ref_=ttls_li_tt",
+    title: "Apollo 13",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BNjEzYjJmNzgtNDkwNy00MTQ4LTlmMWMtNzA4YjE2NjI0ZDg4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UY209_CR0,0,140,209_AL_.jpg",
+    rating: "7.6",
+    description:
+      "NASA must devise a strategy to return Apollo 13 to Earth safely after the spacecraft undergoes massive internal damage putting the lives of the three astronauts on board in jeopardy.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt0199753/?ref_=ttls_li_tt",
+    title: "Red Planet",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BMTY2MzE0MjAwOF5BMl5BanBnXkFtZTYwNDM4Mzg2._V1_UY209_CR0,0,140,209_AL_.jpg",
+    rating: "5.7",
+    description:
+      "Astronauts, and their robotic dog AMEE (Autonomous Mapping Evaluation and Evasion), search for solutions to save a dying Earth by searching on Mars, only to have the mission go terribly awry.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt0120647/?ref_=ttls_li_tt",
+    title: "Deep Impact",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BYTUwMTY1YmMtN2U5NC00YjkzLTg0YWQtZmEwNTEzZjdkNzQ2XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX140_CR0,0,140,209_AL_.jpg",
+    rating: "6.2",
+    description:
+      "A comet is discovered to be on a collision course with Earth. As doomsday nears, the human race prepares for the worst.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt1182345/?ref_=ttls_li_tt",
+    title: "Moon",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BMTgzODgyNTQwOV5BMl5BanBnXkFtZTcwNzc0NTc0Mg@@._V1_UY209_CR1,0,140,209_AL_.jpg",
+    rating: "7.9",
+    description:
+      "Astronaut Sam Bell has a quintessentially personal encounter toward the end of his three-year stint on the Moon, where he, working alongside his computer, GERTY, sends back to Earth parcels of a resource that has helped diminish our planet's power problems.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt0062622/?ref_=ttls_li_tt",
+    title: "2001: A Space Odyssey",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BMmNlYzRiNDctZWNhMi00MzI4LThkZTctMTUzMmZkMmFmNThmXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UY209_CR0,0,140,209_AL_.jpg",
+    rating: "8.3",
+    description:
+      "After discovering a mysterious artifact buried beneath the Lunar surface, mankind sets off on a quest to find its origins with help from intelligent supercomputer H.A.L. 9000.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt0078748/?ref_=ttls_li_tt",
+    title: "Alien",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BMmQ2MmU3NzktZjAxOC00ZDZhLTk4YzEtMDMyMzcxY2IwMDAyXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UY209_CR1,0,140,209_AL_.jpg",
+    rating: "8.4",
+    description:
+      "After a space merchant vessel receives an unknown transmission as a distress call, one of the crew is attacked by a mysterious life form and they soon realize that its life cycle has merely begun.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt0090605/?ref_=ttls_li_tt",
+    title: "Aliens",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BZGU2OGY5ZTYtMWNhYy00NjZiLWI0NjUtZmNhY2JhNDRmODU3XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX140_CR0,0,140,209_AL_.jpg",
+    rating: "8.3",
+    description:
+      "Ellen Ripley is rescued by a deep salvage team after being in hypersleep for 57 years. The moon that the Nostromo visited has been colonized, but contact is lost. This time, colonial marines have impressive firepower, but will that be enough?",
+  },
+  {
+    link: "https://www.imdb.com/title/tt0103644/?ref_=ttls_li_tt",
+    title: "Alien³",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BYTNiYmQzNTctNzAyZC00ODY2LWE3ZjgtODU1NDA0NGI5ZDY1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UX140_CR0,0,140,209_AL_.jpg",
+    rating: "6.5",
+    description:
+      "After her last encounter, Ellen Ripley crash-lands on Fiorina 161, a maximum security prison. When a series of strange and deadly events occur shortly after her arrival, Ripley realizes that she has brought along an unwelcome visitor.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt0118583/?ref_=ttls_li_tt",
+    title: "Alien Resurrection",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BNDljNGZkNmItNDlmMi00YzJhLWJiYWUtNGY4OGEwNmY0ODg4XkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_UY209_CR2,0,140,209_AL_.jpg",
+    rating: "6.2",
+    description:
+      "200 years after her death, Ellen Ripley is revived as a powerful human/alien hybrid clone. Along with a crew of space pirates, she must again battle the deadly aliens and stop them from reaching Earth.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt0083658/?ref_=ttls_li_tt",
+    title: "Blade Runner",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BNzQzMzJhZTEtOWM4NS00MTdhLTg0YjgtMjM4MDRkZjUwZDBlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UY209_CR0,0,140,209_AL_.jpg",
+    rating: "8.1",
+    description:
+      "A blade runner must pursue and terminate four replicants who stole a ship in space, and have returned to Earth to find their creator.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt0084787/?ref_=ttls_li_tt",
+    title: "The Thing",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BNGViZWZmM2EtNGYzZi00ZDAyLTk3ODMtNzIyZTBjN2Y1NmM1XkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_UX140_CR0,0,140,209_AL_.jpg",
+    rating: "8.1",
+    description:
+      "A research team in Antarctica is hunted by a shape-shifting alien that assumes the appearance of its victims.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt0080684/?ref_=ttls_li_tt",
+    title: "Star Wars: Episode V - The Empire Strikes Back",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BYmU1NDRjNDgtMzhiMi00NjZmLTg5NGItZDNiZjU5NTU4OTE0XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX140_CR0,0,140,209_AL_.jpg",
+    rating: "8.7",
+    description:
+      "After the Rebels are brutally overpowered by the Empire on the ice planet Hoth, Luke Skywalker begins Jedi training with Yoda, while his friends are pursued by Darth Vader and a bounty hunter named Boba Fett all over the galaxy.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt1446714/?ref_=ttls_li_tt",
+    title: "Prometheus",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BMTY3NzIyNTA2NV5BMl5BanBnXkFtZTcwNzE2NjI4Nw@@._V1_UY209_CR0,0,140,209_AL_.jpg",
+    rating: "7",
+    description:
+      "Following clues to the origin of mankind, a team finds a structure on a distant moon, but they soon realize they are not alone.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt0121766/?ref_=ttls_li_tt",
+    title: "Star Wars: Episode III - Revenge of the Sith",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BNTc4MTc3NTQ5OF5BMl5BanBnXkFtZTcwOTg0NjI4NA@@._V1_UY209_CR8,0,140,209_AL_.jpg",
+    rating: "7.5",
+    description:
+      "Three years into the Clone Wars, the Jedi rescue Palpatine from Count Dooku. As Obi-Wan pursues a new threat, Anakin acts as a double agent between the Jedi Council and Palpatine and is lured into a sinister plan to rule the galaxy.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt0086190/?ref_=ttls_li_tt",
+    title: "Star Wars: Episode VI - Return of the Jedi",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BOWZlMjFiYzgtMTUzNC00Y2IzLTk1NTMtZmNhMTczNTk0ODk1XkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_UX140_CR0,0,140,209_AL_.jpg",
+    rating: "8.3",
+    description:
+      "After a daring mission to rescue Han Solo from Jabba the Hutt, the Rebels dispatch to Endor to destroy the second Death Star. Meanwhile, Luke struggles to help Darth Vader back from the dark side without falling into the Emperor's trap.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt0121765/?ref_=ttls_li_tt",
+    title: "Star Wars: Episode II - Attack of the Clones",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BMDAzM2M0Y2UtZjRmZi00MzVlLTg4MjEtOTE3NzU5ZDVlMTU5XkEyXkFqcGdeQXVyNDUyOTg3Njg@._V1_UX140_CR0,0,140,209_AL_.jpg",
+    rating: "6.5",
+    description:
+      "Ten years after initially meeting, Anakin Skywalker shares a forbidden romance with Padmé Amidala, while Obi-Wan Kenobi investigates an assassination attempt on the senator and discovers a secret clone army crafted for the Jedi.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt0120915/?ref_=ttls_li_tt",
+    title: "Star Wars: Episode I - The Phantom Menace",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BYTRhNjcwNWQtMGJmMi00NmQyLWE2YzItODVmMTdjNWI0ZDA2XkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_UX140_CR0,0,140,209_AL_.jpg",
+    rating: "6.5",
+    description:
+      "Two Jedi escape a hostile blockade to find allies and come across a young boy who may bring balance to the Force, but the long dormant Sith resurface to claim their original glory.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt0086837/?ref_=ttls_li_tt",
+    title: "2010: The Year We Make Contact",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BOTU1NDQwZjQtODc2YS00MTE4LWE5YTctMmYwYmNiYTU2MzRmXkEyXkFqcGdeQXVyODU2MDg1NzU@._V1_UY209_CR0,0,140,209_AL_.jpg",
+    rating: "6.8",
+    description:
+      "A joint U.S.-Soviet expedition is sent to Jupiter to learn what happened to the Discovery, and H.A.L.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt1440129/?ref_=ttls_li_tt",
+    title: "Battleship",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BMjI5NTM5MDA2N15BMl5BanBnXkFtZTcwNjkwMzQxNw@@._V1_UX140_CR0,0,140,209_AL_.jpg",
+    rating: "5.8",
+    description:
+      "A fleet of ships is forced to do battle with an armada of unknown origins in order to discover and thwart their destructive goals.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt0401729/?ref_=ttls_li_tt",
+    title: "John Carter",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BMDEwZmIzNjYtNjUwNS00MzgzLWJiOGYtZWMxZGQ5NDcxZjUwXkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_UY209_CR6,0,140,209_AL_.jpg",
+    rating: "6.6",
+    description:
+      "Transported to Barsoom, a Civil War vet discovers a barren planet seemingly inhabited by 12-foot tall barbarians. Finding himself prisoner of these creatures, he escapes, only to encounter Woola and a princess in desperate need of a savior.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt1646987/?ref_=ttls_li_tt",
+    title: "Wrath of the Titans",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BMjMyMzk1Nzg3OF5BMl5BanBnXkFtZTcwOTQ2NjcxNw@@._V1_UY209_CR0,0,140,209_AL_.jpg",
+    rating: "5.7",
+    description:
+      "Perseus braves the treacherous underworld to rescue his father, Zeus, captured by his son, Ares, and brother Hades who unleash the ancient Titans upon the world.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt0800320/?ref_=ttls_li_tt",
+    title: "Clash of the Titans",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BMTYxNjg4MzU5OV5BMl5BanBnXkFtZTcwOTA3NTUwMw@@._V1_UY209_CR0,0,140,209_AL_.jpg",
+    rating: "5.8",
+    description:
+      "Perseus, demigod, son of Zeus, battles the minions of the underworld to stop them from conquering heaven and earth.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt1386703/?ref_=ttls_li_tt",
+    title: "Total Recall",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BN2ZiMDMzYWItNDllZC00ZmRmLWI1YzktM2M5M2ZmZDg1OGNlXkEyXkFqcGdeQXVyNDQ2MTMzODA@._V1_UY209_CR4,0,140,209_AL_.jpg",
+    rating: "6.3",
+    description:
+      "A factory worker, Douglas Quaid, begins to suspect that he is a spy after visiting Rekall - a company that provides its clients with implanted fake memories of a life they would like to have led - goes wrong and he finds himself on the run.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt0100802/?ref_=ttls_li_tt",
+    title: "Total Recall",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BYzU1YmJjMGEtMjY4Yy00MTFlLWE3NTUtNzI3YjkwZTMxZjZmXkEyXkFqcGdeQXVyNDc2NjEyMw@@._V1_UY209_CR0,0,140,209_AL_.jpg",
+    rating: "7.5",
+    description:
+      "When a man goes for virtual vacation memories of the planet Mars, an unexpected and harrowing series of events forces him to go to the planet for real - or is he?",
+  },
+  {
+    link: "https://www.imdb.com/title/tt0409847/?ref_=ttls_li_tt",
+    title: "Cowboys & Aliens",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BMTM1MzkyNzQ3OV5BMl5BanBnXkFtZTcwMDk1NTg2NQ@@._V1_UY209_CR0,0,140,209_AL_.jpg",
+    rating: "6",
+    description:
+      "A spaceship arrives in Arizona, 1873, to take over the Earth, starting with the Wild West region. A posse of cowboys and natives are all that stand in their way.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt0499549/?ref_=ttls_li_tt",
+    title: "Avatar",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BMTYwOTEwNjAzMl5BMl5BanBnXkFtZTcwODc5MTUwMw@@._V1_UY209_CR0,0,140,209_AL_.jpg",
+    rating: "7.8",
+    description:
+      "A paraplegic Marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt0063442/?ref_=ttls_li_tt",
+    title: "Planet of the Apes",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BMTg0NjUwMzg5NF5BMl5BanBnXkFtZTgwNDQ0NjcwMTE@._V1_UY209_CR0,0,140,209_AL_.jpg",
+    rating: "8",
+    description:
+      "An astronaut crew crash-lands on a planet in the distant future where intelligent talking apes are the dominant species, and humans are the oppressed and enslaved.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt0796366/?ref_=ttls_li_tt",
+    title: "Star Trek",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BMjE5NDQ5OTE4Ml5BMl5BanBnXkFtZTcwOTE3NDIzMw@@._V1_UY209_CR0,0,140,209_AL_.jpg",
+    rating: "7.9",
+    description:
+      "The brash James T. Kirk tries to live up to his father's legacy with Mr. Spock keeping him in check as a vengeful Romulan from the future creates black holes to destroy the Federation one planet at a time.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt1408101/?ref_=ttls_li_tt",
+    title: "Star Trek into Darkness",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BMTk2NzczOTgxNF5BMl5BanBnXkFtZTcwODQ5ODczOQ@@._V1_UY209_CR0,0,140,209_AL_.jpg",
+    rating: "7.7",
+    description:
+      "After the crew of the Enterprise find an unstoppable force of terror from within their own organization, Captain Kirk leads a manhunt to a war-zone world to capture a one-man weapon of mass destruction.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt1663662/?ref_=ttls_li_tt",
+    title: "Pacific Rim",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BMTY3MTI5NjQ4Nl5BMl5BanBnXkFtZTcwOTU1OTU0OQ@@._V1_UY209_CR0,0,140,209_AL_.jpg",
+    rating: "6.9",
+    description:
+      "As a war between humankind and monstrous sea creatures wages on, a former pilot and a trainee are paired up to drive a seemingly obsolete special weapon in a desperate effort to save the world from the apocalypse.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt1483013/?ref_=ttls_li_tt",
+    title: "Oblivion",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BMTQwMDY0MTA4MF5BMl5BanBnXkFtZTcwNzI3MDgxOQ@@._V1_UX140_CR0,0,140,209_AL_.jpg",
+    rating: "7",
+    description:
+      "A veteran assigned to extract Earth's remaining resources begins to question what he knows about his mission and himself.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt0816692/?ref_=ttls_li_tt",
+    title: "Interstellar",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BZjdkOTU3MDktN2IxOS00OGEyLWFmMjktY2FiMmZkNWIyODZiXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UY209_CR0,0,140,209_AL_.jpg",
+    rating: "8.6",
+    description:
+      "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt1631867/?ref_=ttls_li_tt",
+    title: "Edge of Tomorrow",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BMTc5OTk4MTM3M15BMl5BanBnXkFtZTgwODcxNjg3MDE@._V1_UY209_CR0,0,140,209_AL_.jpg",
+    rating: "7.9",
+    description:
+      "A soldier fighting aliens gets to relive the same day over and over again, the day restarting every time he dies.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt0075860/?ref_=ttls_li_tt",
+    title: "Close Encounters of the Third Kind",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BMjM1NjE5NjQxN15BMl5BanBnXkFtZTgwMjYzMzQxMDE@._V1_UY209_CR0,0,140,209_AL_.jpg",
+    rating: "7.6",
+    description:
+      "Roy Neary, an electric lineman, watches how his quiet and ordinary daily life turns upside down after a close encounter with a UFO.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt0407304/?ref_=ttls_li_tt",
+    title: "War of the Worlds",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BNDUyODAzNDI1Nl5BMl5BanBnXkFtZTcwMDA2NDAzMw@@._V1_UY209_CR0,0,140,209_AL_.jpg",
+    rating: "6.5",
+    description:
+      "As Earth is invaded by alien tripod fighting machines, one family fights for survival in this sci-fi action film.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt1535108/?ref_=ttls_li_tt",
+    title: "Elysium",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BNDc2NjU0MTcwNV5BMl5BanBnXkFtZTcwMjg4MDg2OQ@@._V1_UY209_CR0,0,140,209_AL_.jpg",
+    rating: "6.6",
+    description:
+      "In the year 2154, the very wealthy live on a man-made space station while the rest of the population resides on a ruined Earth. A man takes on a mission that could bring equality to the polarized worlds.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt1136608/?ref_=ttls_li_tt",
+    title: "District 9",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BYmQ5MzFjYWMtMTMwNC00ZGU5LWI3YTQtYzhkMGExNGFlY2Q0XkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_UY209_CR0,0,140,209_AL_.jpg",
+    rating: "7.9",
+    description:
+      "Violence ensues after an extraterrestrial race forced to live in slum-like conditions on Earth finds a kindred spirit in a government agent exposed to their biotechnology.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt1731141/?ref_=ttls_li_tt",
+    title: "Ender's Game",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BMjAzMzI5OTgzMl5BMl5BanBnXkFtZTgwMTU5MTAwMDE@._V1_UY209_CR0,0,140,209_AL_.jpg",
+    rating: "6.6",
+    description:
+      "Young Ender Wiggin is recruited by the International Military to lead the fight against the Formics, an insectoid alien race who had previously tried to invade Earth and had inflicted heavy losses on humankind.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt1815862/?ref_=ttls_li_tt",
+    title: "After Earth",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BMTY3MzQyMjkwMl5BMl5BanBnXkFtZTcwMDk2OTE0OQ@@._V1_UY209_CR0,0,140,209_AL_.jpg",
+    rating: "4.8",
+    description:
+      "A crash landing leaves Kitai Raige and his father Cypher stranded on Earth, a millennium after events forced humanity's escape. With Cypher injured, Kitai must embark on a perilous journey to signal for help.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt0286106/?ref_=ttls_li_tt",
+    title: "Signs",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BNDUwMDUyMDAyNF5BMl5BanBnXkFtZTYwMDQ3NzM3._V1_UY209_CR0,0,140,209_AL_.jpg",
+    rating: "6.7",
+    description:
+      "A family living on a farm finds mysterious crop circles in their fields which suggests something more frightening to come.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt1411250/?ref_=ttls_li_tt",
+    title: "Riddick",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BMTk5NzYwMzQ4MV5BMl5BanBnXkFtZTcwMjE5MTI1OQ@@._V1_UY209_CR0,0,140,209_AL_.jpg",
+    rating: "6.4",
+    description:
+      "Left for dead on a sun-scorched planet, Riddick finds himself up against an alien race of predators. Activating an emergency beacon alerts two ships: one carrying a new breed of mercenary, the other captained by a man from Riddick's past.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt0296572/?ref_=ttls_li_tt",
+    title: "The Chronicles of Riddick",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BNzBjNmJkYjUtMTFjMC00ZWI5LWEyM2YtNzczOTczMmM1ODY5XkEyXkFqcGdeQXVyNzQ1ODk3MTQ@._V1_UY209_CR0,0,140,209_AL_.jpg",
+    rating: "6.7",
+    description:
+      "The wanted criminal Richard Bruno Riddick (Vin Diesel) arrives on a planet called Helion Prime and finds himself up against an invading empire called the Necromongers, an army that plans to convert or kill all humans in the universe.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt0134847/?ref_=ttls_li_tt",
+    title: "Pitch Black",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BNTNmYzE1OWYtZDdjNC00OTdhLTg1YjUtYWJlZTVkMzkzNmVkXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UY209_CR1,0,140,209_AL_.jpg",
+    rating: "7.1",
+    description:
+      "A commercial transport ship and its crew are marooned on a planet full of bloodthirsty creatures that only come out to feast at night. But then, they learn that a month-long eclipse is about to occur.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt1454468/?ref_=ttls_li_tt",
+    title: "Gravity",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BNjE5MzYwMzYxMF5BMl5BanBnXkFtZTcwOTk4MTk0OQ@@._V1_UY209_CR0,0,140,209_AL_.jpg",
+    rating: "7.7",
+    description:
+      "Two astronauts work together to survive after an accident leaves them stranded in space.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt2051879/?ref_=ttls_li_tt",
+    title: "Europa Report",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BMjA2OTk5ODkxMl5BMl5BanBnXkFtZTcwODc4MDk0OQ@@._V1_UY209_CR3,0,140,209_AL_.jpg",
+    rating: "6.4",
+    description:
+      "An international crew of astronauts undertakes a privately funded mission to search for life on Jupiter's fourth largest moon.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt2338151/?ref_=ttls_li_tt",
+    title: "PK",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BMTYzOTE2NjkxN15BMl5BanBnXkFtZTgwMDgzMTg0MzE@._V1_UY209_CR2,0,140,209_AL_.jpg",
+    rating: "8.1",
+    description:
+      "Director: Rajkumar Hirani | Stars: Aamir Khan, Anushka Sharma, Sanjay Dutt, Boman Irani",
+  },
+  {
+    link: "https://www.imdb.com/title/tt1409024/?ref_=ttls_li_tt",
+    title: "Men in Black 3",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BMTU2NTYxODcwMF5BMl5BanBnXkFtZTcwNDk1NDY0Nw@@._V1_UY209_CR0,0,140,209_AL_.jpg",
+    rating: "6.8",
+    description:
+      "Agent J travels in time to M.I.B.'s early days in 1969 to stop an alien from assassinating his friend Agent K and changing history.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt0116996/?ref_=ttls_li_tt",
+    title: "Mars Attacks!",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BNThlMjBmOWItNjljZi00ZGU4LWJkZjgtNWU1ZjI1MTg4MzczXkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_UX140_CR0,0,140,209_AL_.jpg",
+    rating: "6.3",
+    description:
+      "Earth is invaded by Martians with unbeatable weapons and a cruel sense of humor.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt2015381/?ref_=ttls_li_tt",
+    title: "Guardians of the Galaxy",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BMTAwMjU5OTgxNjZeQTJeQWpwZ15BbWU4MDUxNDYxODEx._V1_UY209_CR0,0,140,209_AL_.jpg",
+    rating: "8",
+    description:
+      "A group of intergalactic criminals must pull together to stop a fanatical warrior with plans to purge the universe.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt0120912/?ref_=ttls_li_tt",
+    title: "Men in Black II",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BMTMxNDA0NTMxMV5BMl5BanBnXkFtZTYwMDE2NzY2._V1_UY209_CR0,0,140,209_AL_.jpg",
+    rating: "6.2",
+    description:
+      "Agent Jay is sent to find Agent Kay and restore his memory after the re-appearance of a case from Kay's past.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt0119654/?ref_=ttls_li_tt",
+    title: "Men in Black",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BOTlhYTVkMDktYzIyNC00NzlkLTlmN2ItOGEyMWQ4OTA2NDdmXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_UX140_CR0,0,140,209_AL_.jpg",
+    rating: "7.3",
+    description:
+      "A police officer joins a secret organization that polices and monitors extraterrestrial interactions on Earth.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt0133152/?ref_=ttls_li_tt",
+    title: "Planet of the Apes",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BY2RlMDhlY2MtMjQ1Zi00NzI5LTgxOTgtZjliNWMzYTY3NWZkL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX140_CR0,0,140,209_AL_.jpg",
+    rating: "5.7",
+    description:
+      "In 2029, an Air Force astronaut crash-lands on a mysterious planet where evolved, talking apes dominate a race of primitive humans.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt0060028/?ref_=ttls_li_tt",
+    title: "Star Trek",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BNDRkMTNiNjgtZDIyOC00NmE1LTlkZjEtMGZiNTcyZDQ0NjcxXkEyXkFqcGdeQXVyNTE1NjY5Mg@@._V1_UY209_CR4,0,140,209_AL_.jpg",
+    rating: "8.3",
+    description:
+      "Stars: William Shatner, Leonard Nimoy, DeForest Kelley, Nichelle Nichols",
+  },
+  {
+    link: "https://www.imdb.com/title/tt0079945/?ref_=ttls_li_tt",
+    title: "Star Trek - The Motion Picture",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BNzNlMzNlNmQtNmYzNS00YmU5LWIzYWQtMDRkYzIzNzEzOTIyXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX140_CR0,0,140,209_AL_.jpg",
+    rating: "6.4",
+    description:
+      "When an alien spacecraft of enormous power is spotted approaching Earth, Admiral James T. Kirk resumes command of the overhauled USS Enterprise in order to intercept it.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt0092455/?ref_=ttls_li_tt",
+    title: "Star Trek: The Next Generation",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BOWFhYjE4NzMtOWJmZi00NzEyLTg5NTctYmIxMTU1ZDIxMDAyXkEyXkFqcGdeQXVyNTE1NjY5Mg@@._V1_UY209_CR3,0,140,209_AL_.jpg",
+    rating: "8.6",
+    description:
+      "Stars: Patrick Stewart, Brent Spiner, Jonathan Frakes, LeVar Burton",
+  },
+  {
+    link: "https://www.imdb.com/title/tt0253754/?ref_=ttls_li_tt",
+    title: "Star Trek: Nemesis",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BMjAxNjY2NDY3NF5BMl5BanBnXkFtZTcwMjA0MTEzMw@@._V1_UY209_CR0,0,140,209_AL_.jpg",
+    rating: "6.4",
+    description:
+      "The Enterprise is diverted to the Romulan homeworld Romulus, supposedly because they want to negotiate a peace treaty. Captain Picard and his crew discover a serious threat to the Federation once Praetor Shinzon plans to attack Earth.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt2980516/?ref_=ttls_li_tt",
+    title: "The Theory of Everything",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BMTAwMTU4MDA3NDNeQTJeQWpwZ15BbWU4MDk4NTMxNTIx._V1_UY209_CR0,0,140,209_AL_.jpg",
+    rating: "7.7",
+    description:
+      "A look at the relationship between the famous physicist Stephen Hawking and his wife.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt0371724/?ref_=ttls_li_tt",
+    title: "The Hitchhiker's Guide to the Galaxy",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BZmU5MGU4MjctNjA2OC00N2FhLWFhNWQtMzQyMGI2ZmQ0Y2YyL2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_UY209_CR1,0,140,209_AL_.jpg",
+    rating: "6.8",
+    description:
+      'Mere seconds before the Earth is to be demolished by an alien construction crew, journeyman Arthur Dent is swept off the planet by his friend Ford Prefect, a researcher penning a new edition of "The Hitchhiker\'s Guide to the Galaxy."',
+  },
+  {
+    link: "https://www.imdb.com/title/tt0119081/?ref_=ttls_li_tt",
+    title: "Event Horizon",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BZGI0NDMwNjAtNGEzNC00MzA1LTlkMjQtYjBkYTZlZjAyZWEyXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX140_CR0,0,140,209_AL_.jpg",
+    rating: "6.7",
+    description:
+      "A rescue crew investigates a spaceship that disappeared into a black hole and has now returned...with someone or something new on-board.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt0105946/?ref_=ttls_li_tt",
+    title: "Babylon 5",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BN2Q3ZWM0YzgtMGU0Mi00OWM0LWIwNzctNmQ4NTUyYTk0ZWY2XkEyXkFqcGdeQXVyMzYyMzU2OA@@._V1_UY209_CR1,0,140,209_AL_.jpg",
+    rating: "8.3",
+    description:
+      "Stars: Mira Furlan, Richard Biggs, Stephen Furst, Andreas Katsulas",
+  },
+  {
+    link: "https://www.imdb.com/title/tt0086197/?ref_=ttls_li_tt",
+    title: "The Right Stuff",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BOTUwMDA3MTYtZjhjMi00ODFmLTg5ZTAtYzgwN2NlODgzMmUwXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_UY209_CR0,0,140,209_AL_.jpg",
+    rating: "7.8",
+    description:
+      "The story of the original Mercury 7 astronauts and their macho, seat-of-the-pants approach to the space program.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt0049223/?ref_=ttls_li_tt",
+    title: "Forbidden Planet",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BOTdmODZkNmQtYjU4Mi00MTcyLTg5YmEtNmVjMWU1M2Y5NzgyXkEyXkFqcGdeQXVyNDYyMDk5MTU@._V1_UX140_CR0,0,140,209_AL_.jpg",
+    rating: "7.6",
+    description:
+      "Director: Fred M. Wilcox | Stars: Walter Pidgeon, Anne Francis, Leslie Nielsen, Warren Stevens",
+  },
+  {
+    link: "https://www.imdb.com/title/tt0069293/?ref_=ttls_li_tt",
+    title: "Solaris",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BZmY4Yjc0OWQtZDRhMy00ODc2LWI2NGYtMWFlODYyN2VlNDQyXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UY209_CR4,0,140,209_AL_.jpg",
+    rating: "8.1",
+    description:
+      "A psychologist is sent to a station orbiting a distant planet in order to discover what has caused the crew to go insane.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt0458290/?ref_=ttls_li_tt",
+    title: "Star Wars: The Clone Wars",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BZWFlNzRmOTItZjY1Ni00ZjZkLTk5MDgtOGFhOTYzNWFhYzhmXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_UY209_CR0,0,140,209_AL_.jpg",
+    rating: "8.2",
+    description:
+      "Stars: Tom Kane, Dee Bradley Baker, Matt Lanter, James Arnold Taylor",
+  },
+  {
+    link: "https://www.imdb.com/title/tt0076759/?ref_=ttls_li_tt",
+    title: "Star Wars: Episode IV - A New Hope",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BNzVlY2MwMjktM2E4OS00Y2Y3LWE3ZjctYzhkZGM3YzA1ZWM2XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX140_CR0,0,140,209_AL_.jpg",
+    rating: "8.6",
+    description:
+      "Luke Skywalker joins forces with a Jedi Knight, a cocky pilot, a Wookiee and two droids to save the galaxy from the Empire's world-destroying battle station, while also attempting to rescue Princess Leia from the mysterious Darth Vader.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt0120591/?ref_=ttls_li_tt",
+    title: "Armageddon",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BMGM0NzE2YjgtZGQ4YS00MmY3LTg4ZDMtYjUwNTNiNTJhNTQ5XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UY209_CR2,0,140,209_AL_.jpg",
+    rating: "6.7",
+    description:
+      "After discovering that an asteroid the size of Texas is going to impact Earth in less than a month, NASA recruits a misfit team of deep-core drillers to save the planet.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt0272152/?ref_=ttls_li_tt",
+    title: "K-PAX",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BMjE5ZDVkNDAtMTJmYy00NzkzLTg2ZDUtOTZkOTU1ZDYwYTFhL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_UY209_CR4,0,140,209_AL_.jpg",
+    rating: "7.4",
+    description:
+      "PROT is a patient at a mental hospital who claims to be from a faraway planet named K-PAX. His psychiatrist tries to help him, only to begin to doubt his own explanations.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt0100403/?ref_=ttls_li_tt",
+    title: "Predator 2",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BNThjZjI4NTgtZDk4Mi00ZjI1LWExZGUtNTRkOWY1ZTY3M2FlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX140_CR0,0,140,209_AL_.jpg",
+    rating: "6.3",
+    description:
+      "The Predator returns to Earth, this time to stake a claim on the war-torn streets of a dystopian Los Angeles.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt1424381/?ref_=ttls_li_tt",
+    title: "Predators",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BNjFmNDNlMGItMDQxMS00ZWMxLTg4MmQtMTBiNWU3ZDU1Nzk1XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UY209_CR0,0,140,209_AL_.jpg",
+    rating: "6.4",
+    description:
+      "A group of elite warriors parachute into an unfamiliar jungle and are hunted by members of a merciless alien race.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt0093773/?ref_=ttls_li_tt",
+    title: "Predator",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BY2QwYmFmZTEtNzY2Mi00ZWMyLWEwY2YtMGIyNGZjMWExOWEyXkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_UY209_CR0,0,140,209_AL_.jpg",
+    rating: "7.8",
+    description:
+      "A team of commandos on a mission in a Central American jungle find themselves hunted by an extraterrestrial warrior.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt1650062/?ref_=ttls_li_tt",
+    title: "Super 8",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BMjIzNjEyMzcwOF5BMl5BanBnXkFtZTcwMTkyMjE0NQ@@._V1_UY209_CR0,0,140,209_AL_.jpg",
+    rating: "7",
+    description:
+      "During the summer of 1979, a group of friends witness a train crash and investigate subsequent unexplained events in their small town.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt0448134/?ref_=ttls_li_tt",
+    title: "Sunshine",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BMTU5Nzg2OTk2NF5BMl5BanBnXkFtZTYwNTc1ODM3._V1_UY209_CR0,0,140,209_AL_.jpg",
+    rating: "7.2",
+    description:
+      "A team of international astronauts are sent on a dangerous mission to reignite the dying Sun with a nuclear fission bomb in 2057.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt0910970/?ref_=ttls_li_tt",
+    title: "WALL·E",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BMjExMTg5OTU0NF5BMl5BanBnXkFtZTcwMjMxMzMzMw@@._V1_UY209_CR0,0,140,209_AL_.jpg",
+    rating: "8.4",
+    description:
+      "In the distant future, a small waste-collecting robot inadvertently embarks on a space journey that will ultimately decide the fate of mankind.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt0120913/?ref_=ttls_li_tt",
+    title: "Titan A.E.",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BYTVkYTAyZDMtYzNmYi00OTkyLTg3M2ItNmE0MDZkNmY3Y2I3XkEyXkFqcGdeQXVyNjU2MDUzMjY@._V1_UX140_CR0,0,140,209_AL_.jpg",
+    rating: "6.6",
+    description:
+      "A young man learns that he has to find a hidden Earth ship before an enemy alien species does in order to secure the survival of humanity.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt0133240/?ref_=ttls_li_tt",
+    title: "Treasure Planet",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BNGI0N2EzZDktNDY3OS00NWFmLTgxZjEtMTc1OTNlMzQxNDZkXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_UY209_CR0,0,140,209_AL_.jpg",
+    rating: "7.2",
+    description:
+      'A Disney animated version of "Treasure Island". The only difference is that this movie is set in outer space with alien worlds and other galactic wonders.',
+  },
+  {
+    link: "https://www.imdb.com/title/tt1001526/?ref_=ttls_li_tt",
+    title: "Megamind",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BMTAzMzI0NTMzNDBeQTJeQWpwZ15BbWU3MDM3NTAyOTM@._V1_UX140_CR0,0,140,209_AL_.jpg",
+    rating: "7.2",
+    description:
+      "The supervillain Megamind finally defeats his nemesis, the superhero Metro Man. But without a hero, he loses all purpose and must find new meaning to his life.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt0892782/?ref_=ttls_li_tt",
+    title: "Monsters vs. Aliens",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BMTY0OTQ3MzE3MV5BMl5BanBnXkFtZTcwMDQyMzMzMg@@._V1_UY209_CR0,0,140,209_AL_.jpg",
+    rating: "6.4",
+    description:
+      "A woman transformed into a giant after she is struck by a meteorite on her wedding day becomes part of a team of monsters sent in by the U.S. government to defeat an alien mastermind trying to take over Earth.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt2245084/?ref_=ttls_li_tt",
+    title: "Big Hero 6",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BMDliOTIzNmUtOTllOC00NDU3LWFiNjYtMGM0NDc1YTMxNjYxXkEyXkFqcGdeQXVyNTM3NzExMDQ@._V1_UY209_CR3,0,140,209_AL_.jpg",
+    rating: "7.8",
+    description:
+      "The special bond develops between plus-sized inflatable robot Baymax, and prodigy Hiro Hamada. They team up with a group of friends to form a band of high-tech heroes.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt0083866/?ref_=ttls_li_tt",
+    title: "E.T. the Extra-Terrestrial",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BMTQ2ODFlMDAtNzdhOC00ZDYzLWE3YTMtNDU4ZGFmZmJmYTczXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX140_CR0,0,140,209_AL_.jpg",
+    rating: "7.8",
+    description:
+      "A troubled child summons the courage to help a friendly alien escape Earth and return to his home world.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt1709143/?ref_=ttls_li_tt",
+    title: "The Last Days on Mars",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BMTk4ODgxMDU0M15BMl5BanBnXkFtZTgwOTg0NzcyMDE@._V1_UY209_CR0,0,140,209_AL_.jpg",
+    rating: "5.5",
+    description:
+      "A group of astronaut explorers succumb one by one to a mysterious and terrifying force while collecting specimens on Mars.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt2856930/?ref_=ttls_li_tt",
+    title: "Gagarin. Pervyy v kosmose",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BOTc2NDM4NzAyN15BMl5BanBnXkFtZTgwMDUzNTY1MDE@._V1_UY209_CR3,0,140,209_AL_.jpg",
+    rating: "6.6",
+    description:
+      "Director: Pavel Parkhomenko | Stars: Yaroslav Zhalnin, Mikhail Filippov, Olga Ivanova, Vadim Michman",
+  },
+  {
+    link: "https://www.imdb.com/title/tt0307479/?ref_=ttls_li_tt",
+    title: "Solaris",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BNzlkNGE0MmMtMzU4YS00ZDU1LWFhMTktZDRjMGU5MjI1MzRlXkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_UY209_CR0,0,140,209_AL_.jpg",
+    rating: "6.2",
+    description:
+      "A troubled psychologist is sent to investigate the crew of an isolated research station orbiting a bizarre planet.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt3659388/?ref_=ttls_li_tt",
+    title: "The Martian",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BMTc2MTQ3MDA1Nl5BMl5BanBnXkFtZTgwODA3OTI4NjE@._V1_UY209_CR0,0,140,209_AL_.jpg",
+    rating: "8",
+    description:
+      "An astronaut becomes stranded on Mars after his team assume him dead, and must rely on his ingenuity to find a way to signal to Earth that he is alive.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt1186830/?ref_=ttls_li_tt",
+    title: "Agora",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BOThmZGM4OWQtZTk5Zi00YmFlLTg5MWQtNzNlNDc0OTdjNjdmXkEyXkFqcGdeQXVyMTAwMzUyMzUy._V1_UY209_CR7,0,140,209_AL_.jpg",
+    rating: "7.2",
+    description:
+      "A historical drama set in Roman Egypt, concerning a slave who turns to the rising tide of Christianity in the hope of pursuing freedom while falling in love with his mistress, the philosophy and mathematics professor Hypatia of Alexandria.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt0407362/?ref_=ttls_li_tt",
+    title: "Battlestar Galactica",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BZjBjMjk4YWQtZjY1MC00NTI5LWEwZDMtYWMyYjk2MjkzMThhXkEyXkFqcGdeQXVyNzA5NjUyNjM@._V1_UY209_CR1,0,140,209_AL_.jpg",
+    rating: "8.7",
+    description:
+      "Stars: Edward James Olmos, Mary McDonnell, Jamie Bamber, James Callis",
+  },
+  {
+    link: "https://www.imdb.com/title/tt2224026/?ref_=ttls_li_tt",
+    title: "Home",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BMjExOTQ4MDMyMV5BMl5BanBnXkFtZTgwMTE3NDM2MzE@._V1_UY209_CR0,0,140,209_AL_.jpg",
+    rating: "6.6",
+    description:
+      "An alien on the run from his own people makes friends with a girl. He tries to help her on her quest, but can be an interference.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt0087182/?ref_=ttls_li_tt",
+    title: "Dune",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BYTAzYzNlMDMtMGRjYS00M2UxLTk0MmEtYmE4YWZiYmEwOTIwL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyNzc5MjA3OA@@._V1_UX140_CR0,0,140,209_AL_.jpg",
+    rating: "6.5",
+    description:
+      "A Duke's son leads desert warriors against the galactic emperor and his father's evil nemesis when they assassinate his father and free their desert world from the emperor's rule.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt0111282/?ref_=ttls_li_tt",
+    title: "Stargate",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BYWEyYTQzNzQtZTg5OS00NDhkLTg1NjYtMzA5Y2MyYjYzNWQ5L2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_UX140_CR0,0,140,209_AL_.jpg",
+    rating: "7.1",
+    description:
+      "An interstellar teleportation device, found in Egypt, leads to a planet with humans resembling ancient Egyptians who worship the god Ra.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt1772240/?ref_=ttls_li_tt",
+    title: "Apollo 18",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BMTk5MTk3OTk3OV5BMl5BanBnXkFtZTcwMzg4MzgxNg@@._V1_UY209_CR0,0,140,209_AL_.jpg",
+    rating: "5.2",
+    description:
+      "Decades-old found footage from NASA's abandoned Apollo 18 mission, where three American astronauts were sent on a secret expedition, reveals the reason the U.S. has never returned to the moon.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt0120570/?ref_=ttls_li_tt",
+    title: "From the Earth to the Moon",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BMTg1NTM4ODctMWUxYi00NDZhLWJhNGEtNzA3MGE4MWY4N2E2XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_UY209_CR4,0,140,209_AL_.jpg",
+    rating: "8.6",
+    description: "Stars: Tom Hanks, Nick Searcy, Lane Smith, David Andrews",
+  },
+  {
+    link: "https://www.imdb.com/title/tt0064639/?ref_=ttls_li_tt",
+    title: "Marooned",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BYzMyNmFhMTMtNGMwMC00NjZjLTlkMzctYWYyODA2NTg3ZTk3XkEyXkFqcGdeQXVyNjY1NTQ0NDg@._V1_UX140_CR0,0,140,209_AL_.jpg",
+    rating: "5.9",
+    description:
+      "Three American astronauts are stranded in space when their retros won't fire. Can they be rescued before their oxygen runs out?",
+  },
+  {
+    link: "https://www.imdb.com/title/tt1541874/?ref_=ttls_li_tt",
+    title: "Love",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BMjI3MzUxNDkyNF5BMl5BanBnXkFtZTcwNzYwNjYwNw@@._V1_UX140_CR0,0,140,209_AL_.jpg",
+    rating: "5.5",
+    description:
+      "Director: William Eubank | Stars: Gunner Wright, Corey Richardson, Bradley Horne, Nancy Stelle",
+  },
+  {
+    link: "https://www.imdb.com/title/tt0079550/?ref_=ttls_li_tt",
+    title: "Meteor",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BOTI0NmIzZmEtZTVmYS00N2I4LWFkZGMtNDZmMGE2ZmY5NzE3XkEyXkFqcGdeQXVyMjI4MjA5MzA@._V1_UY209_CR7,0,140,209_AL_.jpg",
+    rating: "5",
+    description:
+      "The U.S. must join forces with the U.S.S.R. in order to destroy a gigantic asteroid heading straight for Earth.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt0044207/?ref_=ttls_li_tt",
+    title: "When Worlds Collide",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BNDE2MGEwZDMtNGU3OC00NTA5LWJkMmQtMTg0ODlkM2Y0YTFhL2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_UX140_CR0,0,140,209_AL_.jpg",
+    rating: "6.6",
+    description:
+      "Director: Rudolph Maté | Stars: Richard Derr, Barbara Rush, Peter Hansen, John Hoyt",
+  },
+  {
+    link: "https://www.imdb.com/title/tt1307068/?ref_=ttls_li_tt",
+    title: "Seeking a Friend for the End of the World",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BMTk4MDQ1NzE3N15BMl5BanBnXkFtZTcwMjA0MDkzNw@@._V1_UY209_CR0,0,140,209_AL_.jpg",
+    rating: "6.7",
+    description:
+      "As an asteroid nears Earth, a man finds himself alone after his wife leaves in a panic. He decides to take a road trip to reunite with his high school sweetheart. Accompanying him is a neighbor who inadvertently puts a wrench in his plan.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt0970416/?ref_=ttls_li_tt",
+    title: "The Day the Earth Stood Still",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BMTI5NTg1MzU5Nl5BMl5BanBnXkFtZTcwMDU1ODMwMg@@._V1_UX140_CR0,0,140,209_AL_.jpg",
+    rating: "5.5",
+    description:
+      "A remake of the 1951 classic science fiction film about an alien visitor and his giant robot counterpart who visit Earth.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt0469263/?ref_=ttls_li_tt",
+    title: "The Astronaut Farmer",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BMDYyNzUzMTMtNjk4YS00Y2NjLTk4MDktNGIyZGRmY2MwNWFlXkEyXkFqcGdeQXVyMzUwMTgwMw@@._V1_UY209_CR1,0,140,209_AL_.jpg",
+    rating: "6.3",
+    description:
+      "A NASA astronaut, forced to retire years earlier so he could save his family farm, has never given up his dream of space travel and looks to build his own rocket, despite the government's threats to stop him.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt0088172/?ref_=ttls_li_tt",
+    title: "Starman",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BODg5ODI0NzM5M15BMl5BanBnXkFtZTgwNDk5MjQxMDE@._V1_UY209_CR0,0,140,209_AL_.jpg",
+    rating: "7",
+    description:
+      "An alien takes the form of a young widow's husband and makes her drive him across the country. The government tries to stop them.",
+  },
+  {
+    link: "https://www.imdb.com/title/tt0138304/?ref_=ttls_li_tt",
+    title: "The Astronaut's Wife",
+    poster:
+      "https://m.media-amazon.com/images/M/MV5BMTUxNGI2NzUtYzgwNy00NmIyLTgwNjMtZGMzYjhlYjY1MThkXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX140_CR0,0,140,209_AL_.jpg",
+    rating: "5.4",
+    description:
+      "After an explosion in space and subsequent two-minute radio-out period, two astronauts return home to their wives. Slightly it's revealed that they're not the same as they were.",
+  },
+  {
     link: "https://www.imdb.com/title/tt0066769/?ref_=ttls_li_tt",
     title: "The Andromeda Strain",
     poster:
