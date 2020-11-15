@@ -8,8 +8,16 @@ const activity = [
     type: "LISTENING",
   },
   {
+    text: "Symphony of Life",
+    type: "LISTENING",
+  },
+  {
     text: "with Stars",
     type: "PLAYING",
+  },
+  {
+    text: "evolution",
+    type: "STREAMING",
   },
 ];
 module.exports = {

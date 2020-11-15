@@ -31,7 +31,7 @@ module.exports = {
                 .setTitle(currentApod.title)
                 .setURL(currentApod.url)
                 .setImage(currentApod.url)
-                .setDescription(currentApod.explanation)
+                .setDescription(`\`\`\` ${currentApod.explanation}\`\`\``)
                 .setFooter(
                   `${publicationDate.getDate()}/${
                     publicationDate.getMonth() + 1

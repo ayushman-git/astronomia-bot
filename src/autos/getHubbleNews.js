@@ -35,8 +35,7 @@ module.exports = {
                   .setURL(currentNews.url)
                   .setImage(`https:${currentNews.thumbnail_2x}`)
                   .setDescription(
-                    currentNews.abstract.split(" ").splice(0, 50).join(" ") +
-                      "..."
+                    "```" + currentNews.abstract + "```"
                   )
                   .setTimestamp(publicationDate);
                 channel.send(newsEmbed);
