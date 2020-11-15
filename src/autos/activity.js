@@ -14,11 +14,7 @@ const activity = [
   {
     text: "with Stars",
     type: "PLAYING",
-  },
-  {
-    text: "evolution",
-    type: "STREAMING",
-  },
+  }
 ];
 module.exports = {
   name: "changeActivity",
