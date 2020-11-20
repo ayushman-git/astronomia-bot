@@ -8,7 +8,7 @@ const quotesData = require("../assets/quotesData");
 
 module.exports = {
   name: "quotes",
-  aliases: ["q", "quotes", "quotation"],
+  aliases: ["q", "quotes", "quotation", "quote"],
   description: "Display random quotation.",
   execute(message, args) {
     const randomQuote =
