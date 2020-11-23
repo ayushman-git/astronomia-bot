@@ -12,10 +12,10 @@ module.exports = {
   aliases: ["e"],
   description: "Explore universe",
   async execute(message, args) {
-    args[0] = args[0].toLowerCase();
     if (!args[0]) {
       message.channel.send("Please enter celestial obbject's name.");
     } else {
+      args[0] = args[0].toLowerCase();
       const gen = await message.channel.send("Generating...");
       axios
         .get("https://api.le-systeme-solaire.net/rest/bodies/" + args[0])
