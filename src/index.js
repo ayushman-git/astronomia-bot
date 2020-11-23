@@ -19,7 +19,9 @@ admin.initializeApp({
 });
 const db = new admin.firestore();
 
-const PREFIX = ".";
+// const PREFIX = ".";
+//Test
+const PREFIX = "test.";
 const client = new Client({
   partials: ["MESSAGE", "CHANNEL", "REACTION"],
 });
