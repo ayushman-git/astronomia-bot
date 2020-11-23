@@ -52,6 +52,7 @@ for (const file of autoScripts) {
 client.once("ready", () => {
   console.log(`Logged in as ${client.user.tag}`);
   client.autos.get("changeActivity").execute(client);
+  console.log(`Astronomia is in ${client.guilds.cache.size} servers.`);
 });
 
 client.on("message", (msg) => {
@@ -69,7 +70,7 @@ client.on("message", (msg) => {
 
   if (!command) return;
   try {
-    command.execute(msg, args);
+    command.execute(msg, args, client);
   } catch (err) {
     console.log(err);
     msg.reply("There was an error.");
