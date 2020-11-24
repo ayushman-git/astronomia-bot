@@ -9,10 +9,11 @@ module.exports = {
       console.log(
         `Server name - ${server.name} | Region - ${server.region} | Members - ${server.memberCount}`
       );
-      console.log("Total members - " + totalMembers);
     });
+    console.log("Total members - " + totalMembers);
     message.channel.send(
       `Servers - ${client.guilds.cache.size} | Members - ${totalMembers}`
     );
+    totalMembers = 0;
   },
 };
