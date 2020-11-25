@@ -18,7 +18,7 @@ module.exports = {
           const doc = await hubbleRef.get();
           const previousNews = doc.data().news;
           const currentNews = res.data;
-          
+
           client.guilds.cache.forEach((server) => {
             const channel = server.channels.cache.find(
               (channel) => channel.name === "astronomia"
@@ -34,9 +34,8 @@ module.exports = {
                   .setTitle(currentNews.name)
                   .setURL(currentNews.url)
                   .setImage(`https:${currentNews.thumbnail_2x}`)
-                  .setDescription(
-                    "```" + currentNews.abstract + "```"
-                  )
+                  .setDescription("```" + currentNews.abstract + "```")
+                  .addField("\u200B", `[Full Story](${currentNews.url})`)
                   .setTimestamp(publicationDate);
                 channel.send(newsEmbed);
               }
