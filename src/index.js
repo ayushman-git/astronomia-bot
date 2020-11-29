@@ -55,6 +55,7 @@ client.once("ready", () => {
   console.log(`Logged in as ${client.user.tag}`);
   client.autos.get("changeActivity").execute(client);
   console.log(`Astronomia is in ${client.guilds.cache.size} servers.`);
+  client.autos.get("spaceX").execute(client, db);
 });
 
 client.on("message", (msg) => {
