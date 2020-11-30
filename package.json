@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "axios": "^0.20.0",
+    "btoa": "^1.2.1",
     "discord.js": "^12.3.1",
     "dotenv": "^8.2.0",
     "firebase-admin": "^9.3.0"

@@ -75,6 +75,7 @@ client.once("ready", () => {
   console.log(`Logged in as ${client.user.tag}`);
   client.autos.get("changeActivity").execute(client);
   console.log(`Astronomia is in ${client.guilds.cache.size} servers.`);
+  checkTextChannels();
 });
 
 client.on("message", (msg) => {
@@ -108,7 +109,6 @@ setInterval(() => {
 }, 3600000);
 setInterval(() => {
   client.autos.get("apod").execute(client, db);
-  checkTextChannels();
 }, 3600000 * 1.5);
 
 client.login(process.env.DISCORD_BOT_TOKEN);
