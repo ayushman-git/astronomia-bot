@@ -2,7 +2,7 @@ const name = "sky";
 const { MessageEmbed } = require("discord.js");
 const axios = require("axios");
 const btoa = require("btoa");
-const commandUsage = require("../support/commandUsage")
+const commandUsage = require("../support/commandUsage");
 
 require("dotenv").config();
 const astronomyKey = btoa(
@@ -24,6 +24,7 @@ const fetchLatLong = (address, message) => {
     .catch((err) => {
       console.log(err);
       message.channel.send("Something went wrong while fetching data.");
+      message.channel.stopTyping();
     });
 };
 
@@ -36,18 +37,18 @@ const fetchSky = (latLong, style, message) => {
         observer: {
           latitude: Number(latLong.lat),
           longitude: Number(latLong.long),
-          date: new Date(),
+          date: "2020-11-20",
         },
         view: {
           type: "area",
           parameters: {
             position: {
               equatorial: {
-                rightAscension: Number(latLong.long) > 0 ? 14.83 : -14.83,
+                rightAscension: 0,
                 declination: Number(latLong.lat),
               },
             },
-            zoom: 3,
+            zoom: 6,
           },
         },
       },
@@ -62,6 +63,7 @@ const fetchSky = (latLong, style, message) => {
     .catch((err) => {
       console.log(err);
       message.channel.send("Something went wrong while fetching data.");
+      message.channel.stopTyping();
     });
 };
 
@@ -78,9 +80,12 @@ module.exports = {
     }
     let style = "";
     let address = args.join("%20");
-    if (args[0].match(/(red)|(black)|(navy)/g)) {
+    if (args[0].match(/(red)|(black)|(navy)|(white)/g)) {
       if (args[0] === "black") {
         args[0] = "default";
+      }
+      if (args[0] === "white") {
+        args[0] = "inverted";
       }
       style = args[0];
       address = args.splice(1).join("%20");
