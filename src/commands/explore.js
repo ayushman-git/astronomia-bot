@@ -1,3 +1,6 @@
+const name = "explore";
+
+const commandUsage = require("../support/commandUsage")
 const path = require("path");
 const axios = require("axios");
 const { MessageEmbed, MessageAttachment } = require("discord.js");
@@ -8,12 +11,13 @@ const attachment = new MessageAttachment(
 );
 
 module.exports = {
-  name: "explore",
+  name,
   aliases: ["e"],
   description: "Explore universe",
-  async execute(message, args) {
+  async execute(message, args, client, db) {
+    commandUsage(name, db);
     if (!args[0]) {
-      message.channel.send("Please enter celestial obbject's name.");
+      message.channel.send("Please enter celestial object's name.");
     } else {
       args[0] = args[0].toLowerCase();
       const gen = await message.channel.send("Generating...");

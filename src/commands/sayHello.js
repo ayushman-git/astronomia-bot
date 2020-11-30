@@ -1,3 +1,6 @@
+const name = "hello";
+const commandUsage = require("../support/commandUsage")
+
 const path = require("path");
 const helloGif = [
   "awk.gif",
@@ -28,10 +31,12 @@ const keys = Object.keys(greetings);
 let randomKey = null;
 
 module.exports = {
-  name: "hello",
+  name,
   aliases: ["hi", "ahoy", "hii", "ciao", "hola"],
   description: "Greet users",
-  execute(message, args) {
+  execute(message, args, client, db) {
+    commandUsage(name, db);
+
     const greeting = function (rKey) {
       if (typeof greetings[rKey] == "string") {
         return greetings[rKey];

@@ -1,6 +1,10 @@
+const name = "wallpaper";
+
 require("dotenv").config();
 const path = require("path");
 const { MessageEmbed, MessageAttachment } = require("discord.js");
+const commandUsage = require("../support/commandUsage")
+
 const wallpaperUrl = require("../assets/wallpaperUrl");
 const attachment = new MessageAttachment(
   path.join(__dirname, "../assets/images/logo.png"),
@@ -8,10 +12,12 @@ const attachment = new MessageAttachment(
 );
 const axios = require("axios");
 module.exports = {
-  name: "wallpaper",
+  name,
   aliases: ["w", "wallpapers"],
   description: "Download space wallpapers.",
-  execute(message, args) {
+  execute(message, args, client, db) {
+    commandUsage(name, db);
+
     (async () => {
       if (args[0] === "real") {
         const randomPage = Math.floor(Math.random() * 10);

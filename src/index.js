@@ -50,12 +50,31 @@ for (const file of autoScripts) {
   client.autos.set(auto.name, auto);
 }
 
+//Check text channels
+const checkTextChannels = function () {
+  let textChannels = 0;
+  client.guilds.cache.forEach((server) => {
+    const channel = server.channels.cache.find(
+      (channel) => channel.name === "astronomia"
+    );
+    if (channel) {
+      textChannels++;
+    }
+  });
+  const ref = db.collection("fetchObjects").doc("commandUsage");
+  ref.set(
+    {
+      textChannels,
+    },
+    { merge: true }
+  );
+};
+
 //Bot is online
 client.once("ready", () => {
   console.log(`Logged in as ${client.user.tag}`);
   client.autos.get("changeActivity").execute(client);
   console.log(`Astronomia is in ${client.guilds.cache.size} servers.`);
-  client.autos.get("spaceX").execute(client, db);
 });
 
 client.on("message", (msg) => {
@@ -73,7 +92,7 @@ client.on("message", (msg) => {
 
   if (!command) return;
   try {
-    command.execute(msg, args, client);
+    command.execute(msg, args, client, db);
   } catch (err) {
     console.log(err);
     msg.reply("There was an error.");
@@ -85,9 +104,11 @@ setInterval(() => {
 
 setInterval(() => {
   client.autos.get("getHubbleNews").execute(client, db);
+  client.autos.get("spaceX").execute(client, db);
 }, 3600000);
 setInterval(() => {
   client.autos.get("apod").execute(client, db);
+  checkTextChannels();
 }, 3600000 * 1.5);
 
 client.login(process.env.DISCORD_BOT_TOKEN);

@@ -1,4 +1,8 @@
+const name = "help";
+
 const path = require("path");
+const commandUsage = require("../support/commandUsage")
+
 const { MessageEmbed, MessageAttachment } = require("discord.js");
 const attachment = new MessageAttachment(
   path.join(__dirname, "../assets/images/logo.png"),
@@ -53,10 +57,11 @@ const embed = new MessageEmbed()
   );
 
 module.exports = {
-  name: "help",
+  name,
   aliases: ["h"],
   description: "Displays list of all commands.",
-  execute(message, args) {
+  execute(message, args, client, db) {
+    commandUsage(name, db);
     message.channel.send(embed).then(async(msg) => {
       await msg.react("👽")
     })

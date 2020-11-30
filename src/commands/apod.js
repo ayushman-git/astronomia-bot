@@ -1,6 +1,7 @@
 const { MessageEmbed } = require("discord.js");
 require("dotenv").config();
 const axios = require("axios");
+const commandUsage = require("../support/commandUsage")
 
 let apodData = null;
 const apodEmbed = new MessageEmbed();
@@ -35,13 +36,14 @@ fetchData();
 setInterval(() => {
   fetchData();
 }, 3600000);
-
+const name = "apod";
 module.exports = {
-  name: "apod",
+  name,
   aliases: ["a"],
   description: "Astronomy Picture of Day",
-  execute(message, args) {
+  execute(message, args, client, db) {
     (async () => {
+      commandUsage(name, db);
       message.channel.send(apodEmbed).then(async (msg) => {
         await msg.react("❤");
       });

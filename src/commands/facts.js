@@ -1,6 +1,10 @@
+const name = "facts";
+
 const path = require("path");
 const { MessageAttachment, MessageEmbed } = require("discord.js");
 const factsData = require("../assets/factsData");
+const commandUsage = require("../support/commandUsage")
+
 const embed = new MessageEmbed();
 const attachment = new MessageAttachment(
   path.join(__dirname, "../assets/images/logo.png"), "logo.png"
@@ -23,10 +27,11 @@ function setEmbed() {
 }
 
 module.exports = {
-  name: "facts",
+  name,
   aliases: ["f", "fact"],
   description: "Random facts about space",
-  execute(message, args) {
+  execute(message, args, client, db) {
+    commandUsage(name, db);
     (async () => {
       randomFact = await factsData[
         Math.floor(Math.random() * factsData.length)

@@ -1,5 +1,9 @@
+const name = "quotes";
+
 const path = require("path");
 const { MessageEmbed, MessageAttachment } = require("discord.js");
+const commandUsage = require("../support/commandUsage")
+
 const attachment = new MessageAttachment(
   path.join(__dirname, "../assets/images/logo.png"),
   "logo.png"
@@ -7,16 +11,18 @@ const attachment = new MessageAttachment(
 const quotesData = require("../assets/quotesData");
 
 module.exports = {
-  name: "quotes",
+  name,
   aliases: ["q", "quotes", "quotation", "quote"],
   description: "Display random quotation.",
-  execute(message, args) {
+  execute(message, args, client, db) {
+    commandUsage(name, db);
     const randomQuote =
       quotesData[Math.floor(Math.random() * quotesData.length)];
     const quoteEmbed = new MessageEmbed()
       .setColor("#F0386B")
       .setTitle("Quotes")
-      .setDescription(`${randomQuote.content}\n\n — ${randomQuote.author}`)
+      .setDescription(`${randomQuote.content}`)
+      .addField("\u200b", `\`\`\`css\n— ${randomQuote.author}\`\`\``)
       .attachFiles(attachment)
       .setThumbnail("attachment://logo.png")
       .setTimestamp()
