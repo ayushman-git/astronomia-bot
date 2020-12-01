@@ -110,5 +110,8 @@ setInterval(() => {
 setInterval(() => {
   client.autos.get("apod").execute(client, db);
 }, 3600000 * 1.5);
+setInterval(() => {
+  client.autos.get("fetchUpcomingFlightData").execute();
+}, 3600000 * 1.2);
 
 client.login(process.env.DISCORD_BOT_TOKEN);

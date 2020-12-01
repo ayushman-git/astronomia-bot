@@ -1,4 +1,4 @@
-const currentVersion = "0.4.0"
+const currentVersion = "0.4.5"
 
 module.exports = {
   name: "version",
