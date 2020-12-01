@@ -1,10 +1,10 @@
 const name = "explore";
 
 const commandUsage = require("../support/commandUsage")
-const path = require("path");
 const axios = require("axios");
 const { MessageEmbed, MessageAttachment } = require("discord.js");
 const images = require("../assets/images");
+const path = require("path");
 const attachment = new MessageAttachment(
   path.join(__dirname, "../assets/images/logo.png"),
   "logo.png"

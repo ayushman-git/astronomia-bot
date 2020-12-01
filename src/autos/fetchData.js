@@ -8,13 +8,19 @@ const fetchUpcomingFlights = () => {
 
 const fetchEvents = () => {
   return axios
-  .get("https://ll.thespacedevs.com/2.0.0/event/upcoming/")
-  .then((res) => res.data.results);
-}
+    .get("https://ll.thespacedevs.com/2.0.0/event/upcoming/")
+    .then((res) => res.data.results);
+};
+
+// const fetchAstronauts = (astronautName) => {
+//   return axios
+//     .get(`https://ll.thespacedevs.com/2.0.0/astronaut/?limit=100&offset=600`)
+//     .then((res) => res.data.results);
+// };
 
 module.exports = {
-  name: "fetchUpcomingFlightData",
-  description: "Check version",
+  name: "fetchData",
+  description: "Fetch Data",
   async execute() {
     const flightData = await fetchUpcomingFlights();
     const eventData = await fetchEvents();
@@ -25,12 +31,17 @@ module.exports = {
       console.log("Upcoming Flights updated");
     });
 
-
     //event data
     const eventDataStringified = JSON.stringify(eventData);
     const finalEventData = "module.exports=" + eventDataStringified;
     fs.writeFile("./src/assets/eventData.js", finalEventData, () => {
-      console.log("Upcoming Flights updated");
+      console.log("Upcoming Events updated");
     });
+
+    // //to be deleted
+    // const finalAstronautData = await fetchAstronauts();
+    // fs.appendFile("./src/assets/astronautsData.js", JSON.stringify(finalAstronautData), () => {
+    //   console.log("Astronauts updated");
+    // });
   },
 };

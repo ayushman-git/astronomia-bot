@@ -160,10 +160,9 @@ module.exports = {
         );
       }
       message.channel.send(currentEventEmbed);
-      message.channel.stopTyping();
     } else {
       message.channel.send("Please enter a valid command.");
-      message.channel.stopTyping();
     }
+    message.channel.stopTyping();
   },
 };
