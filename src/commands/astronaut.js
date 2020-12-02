@@ -29,6 +29,8 @@ module.exports = {
   aliases: ["astro", "astronauts", "cosmonaut", "cosmonauts"],
   description: "Check version",
   async execute(message, args, client, db) {
+    commandUsage(name, db);
+
     let msgID = null;
     let msgInstance = null;
     let offset = 0;
@@ -72,7 +74,6 @@ module.exports = {
         }
       }
     });
-    commandUsage(name, db);
     if (args.length === 0) {
       const astroListEmbed = new MessageEmbed()
         .setColor("#F0386B")

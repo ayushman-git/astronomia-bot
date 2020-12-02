@@ -113,6 +113,6 @@ setInterval(() => {
 }, 3600000);
 setInterval(() => {
   client.autos.get("fetchData").execute();
-}, 3600000 * 12);
+}, 3600000 * 3);
 
 client.login(process.env.DISCORD_BOT_TOKEN);
