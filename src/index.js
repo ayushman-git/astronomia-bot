@@ -99,6 +99,9 @@ client.on("message", (msg) => {
     msg.reply("There was an error.");
   }
 });
+
+
+
 setInterval(() => {
   client.autos.get("changeActivity").execute(client);
 }, 300000);
@@ -106,12 +109,10 @@ setInterval(() => {
 setInterval(() => {
   client.autos.get("getHubbleNews").execute(client, db);
   client.autos.get("spaceX").execute(client, db);
+  client.autos.get("apod").execute(client, db);
 }, 3600000);
 setInterval(() => {
-  client.autos.get("apod").execute(client, db);
-}, 3600000 * 1.5);
-setInterval(() => {
   client.autos.get("fetchData").execute();
-}, 3600000 / 2);
+}, 3600000 * 12);
 
 client.login(process.env.DISCORD_BOT_TOKEN);
