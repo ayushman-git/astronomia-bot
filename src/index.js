@@ -18,6 +18,8 @@ admin.initializeApp({
   }),
 });
 const db = new admin.firestore();
+const getExp = require("./support/getExp")
+
 
 const PREFIX = ".";
 //Test
@@ -94,6 +96,7 @@ client.on("message", (msg) => {
   if (!command) return;
   try {
     command.execute(msg, args, client, db);
+    getExp(msg.author.id, db);
   } catch (err) {
     console.log(err);
     msg.reply("There was an error.");
