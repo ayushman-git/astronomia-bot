@@ -20,11 +20,13 @@ module.exports = {
         const previousApod = doc.data().todayApod;
         const currentApod = res.data;
         client.guilds.cache.forEach((server) => {
-          const channel = server.channels.cache.find(
-            (channel) => channel.name === "astronomia"
-          );
+          const channel = server.channels.cache.find((channel) => {
+            return channel.name === "astronomia";
+            // for testing
+            // return channel.id === "770180128340312065";
+          });
           if (channel) {
-            if (JSON.stringify(currentApod) != previousApod) {
+            if (currentApod.date != previousApod) {
               const publicationDate = new Date(currentApod.date);
               const apodEmbed = new MessageEmbed()
                 .setColor("#F0386B")
@@ -45,7 +47,7 @@ module.exports = {
         });
         //change previous apod with current
         await apodRef.set({
-          todayApod: JSON.stringify(currentApod),
+          todayApod: currentApod.date,
         });
       })
       .catch((err) => {

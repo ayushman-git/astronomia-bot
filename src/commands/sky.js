@@ -31,7 +31,7 @@ const fetchLatLong = (address, message) => {
     })
     .catch((err) => {
       console.log(err);
-      message.channel.send("Something went wrong while fetching data.");
+      message.channel.send("Location is not given or invalid.");
       message.channel.stopTyping();
     });
 };
@@ -70,7 +70,7 @@ const fetchSky = (latLong, style, message) => {
     .then((res) => res.data.data.imageUrl)
     .catch((err) => {
       console.log(err);
-      message.channel.send("Something went wrong while fetching data.");
+      message.channel.send("Something went wrong.");
       message.channel.stopTyping();
     });
 };
@@ -98,6 +98,7 @@ module.exports = {
       style = args[0];
       address = args.splice(1).join("%20");
     }
+    
     message.channel.startTyping();
     const addressDetail = await fetchLatLong(address, message);
     const mapURL = await fetchSky(addressDetail, style, message);
@@ -123,8 +124,8 @@ module.exports = {
             name: "```Long - " + Number(addressDetail.long).toFixed(4) + "```",
             value: `\u200b`,
             inline: true,
-          }
-          ,{
+          },
+          {
             name: `\u200b`,
             value: `\u200b`,
             inline: true,
