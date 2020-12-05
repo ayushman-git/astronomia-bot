@@ -31,6 +31,10 @@ const embed = new MessageEmbed()
       value: `\`\`\`css\n.explore <object> - Displays info about a specified celestial object\n.e <object>\nEg. .e moon\`\`\``,
     },
     {
+      name: "```Ranking```",
+      value: `\`\`\`css\n.level - Displays user's current level/profile.\n .l, .lvl, .profile\`\`\``,
+    },
+    {
       name: "```Sky/Moon view```",
       value: `\`\`\`css\n.sky red|black|white|navy(optional) <location> - Displays sky of specified location.\nEg. .sky red madrid\n.moonphase <location> - Displays moon's phase of given location.\`\`\``,
     },
@@ -49,8 +53,8 @@ const embed = new MessageEmbed()
     {
       name: "\u200b",
       value: `You can visit [astronomia](https://ayushman-git.github.io/astronomia-site/) site if you want to learn something extra.`,
-    },
-  )
+    }
+  );
 module.exports = {
   name,
   aliases: ["h"],

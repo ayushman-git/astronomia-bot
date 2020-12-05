@@ -95,7 +95,9 @@ client.on("message", (msg) => {
   if (!command) return;
   try {
     command.execute(msg, args, client, db);
-    incXP(msg.author.id, db);
+    if (command.name != "level") {
+      incXP(msg.author.id, db);
+    }
   } catch (err) {
     console.log(err);
     msg.reply("There was an error.");
