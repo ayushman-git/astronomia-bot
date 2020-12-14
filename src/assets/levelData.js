@@ -11,7 +11,7 @@ module.exports = [
   {
     level: 1,
     forPreviousLevel: 100,
-    forNextLevel: 210,
+    forNextLevel: 300,
     title: "Moon",
     color: "#7a7a7a",
     description:
@@ -19,8 +19,8 @@ module.exports = [
   },
   {
     level: 2,
-    forPreviousLevel: 210,
-    forNextLevel: 340,
+    forPreviousLevel: 300,
+    forNextLevel: 600,
     title: "Red Moon",
     color: "#c92323",
     description:
@@ -28,8 +28,8 @@ module.exports = [
   },
   {
     level: 3,
-    forPreviousLevel: 340,
-    forNextLevel: 500,
+    forPreviousLevel: 600,
+    forNextLevel: 1000,
     title: "Titan",
     color: "#37cc8b",
     description:
@@ -37,8 +37,8 @@ module.exports = [
   },
   {
     level: 4,
-    forPreviousLevel: 500,
-    forNextLevel: 700,
+    forPreviousLevel: 1000,
+    forNextLevel: 1500,
     title: "Pluto",
     color: "#a62815",
     description:
@@ -46,11 +46,38 @@ module.exports = [
   },
   {
     level: 5,
-    forPreviousLevel: 700,
-    forNextLevel: 850,
+    forPreviousLevel: 1500,
+    forNextLevel: 2100,
     title: "Mars",
     color: "#e12727",
     description:
       "The bright rust color Mars is known for is due to iron-rich minerals in its regolith — the loose dust and rock covering its surface.",
+  },
+  {
+    level: 6,
+    forPreviousLevel: 2100,
+    forNextLevel: 2800,
+    title: "Saturn",
+    color: "#bf8d3d",
+    description:
+      "Adorned with thousands of beautiful ringlets, Saturn is unique among the planets.",
+  },
+  {
+    level: 7,
+    forPreviousLevel: 2800,
+    forNextLevel: 3600,
+    title: "Kepler-452b",
+    color: "#0e2e6e",
+    description:
+      "Bigger, Older Cousin to Earth.",
+  },
+  {
+    level: 8,
+    forPreviousLevel: 3600,
+    forNextLevel: 4500,
+    title: "Earth",
+    color: "#213693",
+    description:
+      "There's no other place like earth. 🌏",
   },
 ];
