@@ -1,6 +1,6 @@
 const Canvas = require("canvas");
 const path = require("path");
-const { MessageAttachment } = require("discord.js");
+const { MessageAttachment, UserManager } = require("discord.js");
 const commandUsage = require("../support/commandUsage");
 
 const levelData = require("../assets/levelData");
@@ -115,6 +115,13 @@ module.exports = {
       const userLvl = calcUserLevel(userXP);
       message.channel
         .send(await createUserCanvas(message.author, userLvl, userXP))
+        .then((msg) => msg.channel.send("```" + userLvl.description + "```"));
+    } else {
+      const user = await client.users.fetch(message.mentions.users.first().id);
+      const userXP = await getUserExp(user.id, db);
+      const userLvl = calcUserLevel(userXP);
+      message.channel
+        .send(await createUserCanvas(user, userLvl, userXP))
         .then((msg) => msg.channel.send("```" + userLvl.description + "```"));
     }
   },
