@@ -38,6 +38,10 @@ module.exports = {
       console.log("Upcoming Events updated");
     });
 
+    fs.readFile("./src/assets/flightData.js", (err, data) => {
+      console.log(String(data));
+    });
+
     // //to be deleted
     // const finalAstronautData = await fetchAstronauts();
     // fs.appendFile("./src/assets/astronautsData.js", JSON.stringify(finalAstronautData), () => {
