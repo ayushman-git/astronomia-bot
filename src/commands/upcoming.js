@@ -1,6 +1,5 @@
 const name = "upcoming";
 const { MessageEmbed } = require("discord.js");
-const axios = require("axios");
 const commandUsage = require("../support/commandUsage");
 
 const flights = require("../assets/flightData");
