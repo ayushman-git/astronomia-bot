@@ -2,10 +2,7 @@ const name = "upcoming";
 const { MessageEmbed } = require("discord.js");
 const commandUsage = require("../support/commandUsage");
 
-const flights = require("../assets/flightData");
-const events = require("../assets/eventData");
-
-const flightEmbedGen = (index) => {
+const flightEmbedGen = (index, flights) => {
   const currentFlightEmbed = new MessageEmbed()
     .setColor("#F0386B")
     .setTitle(flights[index].name)
@@ -81,7 +78,7 @@ const flightEmbedGen = (index) => {
   return currentFlightEmbed;
 };
 
-const eventEmbedGen = (index) => {
+const eventEmbedGen = (index, events) => {
   const currentEventEmbed = new MessageEmbed()
     .setColor("#F0386B")
     .setTitle(events[index].name)
@@ -160,7 +157,7 @@ const eventEmbedGen = (index) => {
   return currentEventEmbed;
 };
 
-const initialIndex = () => {
+const initialIndex = (flights) => {
   const currentDate = new Date();
   for (let i = 0; i < flights.length; i++) {
     const flightDate = new Date(flights[i].net);
@@ -170,7 +167,7 @@ const initialIndex = () => {
   }
 };
 
-const eventIndexCalc = () => {
+const eventIndexCalc = (events) => {
   const currentDate = new Date();
   for (let i = 0; i < events.length; i++) {
     const eventDate = new Date(events[i].date);
@@ -186,10 +183,15 @@ module.exports = {
   description: "Displays upcoming events/flights",
   async execute(message, args, client, db) {
     commandUsage(name, db);
+    const APIDataRef = db.collection("fetchObjects").doc("APIData");
+    const doc = await APIDataRef.get();
+    const events = JSON.parse(doc.data().events);
+    const flights = JSON.parse(doc.data().flights);
+    
     let msgID = null;
     let messageInstance = null;
-    let globalIndex = initialIndex();
-    const eventIndex = eventIndexCalc();
+    let globalIndex = initialIndex(flights);
+    const eventIndex = eventIndexCalc(events);
 
     message.channel.startTyping();
     client.on("messageReactionAdd", async (reaction, user) => {
@@ -203,7 +205,7 @@ module.exports = {
             return;
           }
           globalIndex++;
-          messageInstance.edit(flightEmbedGen(globalIndex));
+          messageInstance.edit(flightEmbedGen(globalIndex, flights));
         } else if (reaction._emoji.name === "◀") {
           message.reactions.resolve(reaction).users.remove(user);
           if (globalIndex < 1) {
@@ -211,19 +213,21 @@ module.exports = {
           } else {
             globalIndex--;
           }
-          messageInstance.edit(flightEmbedGen(globalIndex));
+          messageInstance.edit(flightEmbedGen(globalIndex, flights));
         }
       }
     });
     if (args.length === 0) {
-      message.channel.send(flightEmbedGen(globalIndex)).then(async (msg) => {
-        messageInstance = msg;
-        msgID = msg.id;
-        await msg.react("◀");
-        await msg.react("▶");
-      });
+      message.channel
+        .send(flightEmbedGen(globalIndex, flights))
+        .then(async (msg) => {
+          messageInstance = msg;
+          msgID = msg.id;
+          await msg.react("◀");
+          await msg.react("▶");
+        });
     } else if (args[0].match(/(event)|(events)/g)) {
-      message.channel.send(eventEmbedGen(eventIndex));
+      message.channel.send(eventEmbedGen(eventIndex, events));
     } else {
       message.channel.send("Please enter a valid command.");
     }

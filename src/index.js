@@ -104,8 +104,8 @@ client.on("message", (msg) => {
       }
       usedCommandRecently.add(msg.author.id);
       setTimeout(() => {
-        usedCommandRecently.delete(msg.author.id)
-      }, 5000)
+        usedCommandRecently.delete(msg.author.id);
+      }, 5000);
     }
   } catch (err) {
     console.log(err);
