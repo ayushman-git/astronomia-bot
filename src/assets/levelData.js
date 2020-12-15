@@ -80,4 +80,40 @@ module.exports = [
     description:
       "There's no other place like earth. 🌏",
   },
+  {
+    level: 9,
+    forPreviousLevel: 4500,
+    forNextLevel: 5500,
+    title: "Star",
+    color: "#f87806",
+    description:
+      "Main sequence stars are the most common stars in the universe. 90% stars are of this type.",
+  },
+  {
+    level: 10,
+    forPreviousLevel: 5500,
+    forNextLevel: 6600,
+    title: "Neutron Star",
+    color: "#1b21b0",
+    description:
+      "These stars rotate at speed of 1000+ rotations per second.",
+  },
+  {
+    level: 11,
+    forPreviousLevel: 6600,
+    forNextLevel: 7800,
+    title: "UY Scuti",
+    color: "#ff1212",
+    description:
+      "Biggest star in the universe.",
+  },
+  {
+    level: 12,
+    forPreviousLevel: 7800,
+    forNextLevel: 10000,
+    title: "Black Hole",
+    color: "#972bea",
+    description:
+      "The only celestial object where physics laws breaks down.",
+  },
 ];

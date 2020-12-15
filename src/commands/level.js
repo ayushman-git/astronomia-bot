@@ -34,6 +34,42 @@ const createUserCanvas = async (user, userLvl, userXP) => {
   ctx.textAlign = "center";
   ctx.fillText(`Level ${userLvl.level}` + " | " + userLvl.title, 204, 230);
 
+  //level img
+  const lvlImg = await Canvas.loadImage(
+    path.join(__dirname, "..", `assets/images/level/${userLvl.level}.png`)
+  );
+  ctx.drawImage(
+    lvlImg,
+    canvas.width / 2 + 20,
+    -((lvlImg.height - canvas.height) / 2),
+    lvlImg.width,
+    lvlImg.height
+  );
+  ctx.save();
+  //user avatar
+  ctx.beginPath();
+  ctx.arc(160 + 45, 70 + 45, 45, 0, Math.PI * 2, true);
+  ctx.closePath();
+  ctx.clip();
+  const avatar = await Canvas.loadImage(
+    user.displayAvatarURL({ format: "jpg", size: 256 })
+  );
+  ctx.drawImage(avatar, 160, 70, 90, 90);
+  ctx.restore();
+  let x = 75,
+    r = 20,
+    y = 280,
+    w = 260,
+    h = 40;
+  ctx.beginPath();
+  ctx.moveTo(x + r, y);
+  ctx.arcTo(x + w, y, x + w, y + h, r);
+  ctx.arcTo(x + w, y + h, x, y + h, r);
+  ctx.arcTo(x, y + h, x, y, r);
+  ctx.arcTo(x, y, x + w, y, r);
+  ctx.closePath();
+  ctx.clip();
+
   //XP bar
   ctx.fillStyle = "#212121";
   ctx.fillRect(75, 280, 260, 40);
@@ -62,28 +98,6 @@ const createUserCanvas = async (user, userLvl, userXP) => {
     204,
     306
   );
-
-  //level img
-  const lvlImg = await Canvas.loadImage(
-    path.join(__dirname, "..", `assets/images/level/${userLvl.level}.png`)
-  );
-  ctx.drawImage(
-    lvlImg,
-    canvas.width / 2 + 20,
-    -((lvlImg.height - canvas.height) / 2),
-    lvlImg.width,
-    lvlImg.height
-  );
-
-  //user avatar
-  ctx.beginPath();
-  ctx.arc(160 + 45, 70 + 45, 45, 0, Math.PI * 2, true);
-  ctx.closePath();
-  ctx.clip();
-  const avatar = await Canvas.loadImage(
-    user.displayAvatarURL({ format: "jpg", size: 256 })
-  );
-  ctx.drawImage(avatar, 160, 70, 90, 90);
 
   const attachment = new MessageAttachment(canvas.toBuffer(), "user-xp.png");
   return attachment;

@@ -19,10 +19,11 @@ admin.initializeApp({
 });
 const db = new admin.firestore();
 const incXP = require("./support/increaseXP");
+const usedCommandRecently = new Set();
 
-const PREFIX = ".";
+// const PREFIX = ".";
 //Test
-// const PREFIX = "test.";
+const PREFIX = "test.";
 const client = new Client({
   partials: ["MESSAGE", "CHANNEL", "REACTION"],
 });
@@ -76,7 +77,7 @@ client.once("ready", () => {
   console.log(`Logged in as ${client.user.tag}`);
   client.autos.get("changeActivity").execute(client);
   console.log(`Astronomia is in ${client.guilds.cache.size} servers.`);
-  checkTextChannels();
+  // checkTextChannels();
 });
 
 client.on("message", (msg) => {
@@ -94,9 +95,17 @@ client.on("message", (msg) => {
 
   if (!command) return;
   try {
-    command.execute(msg, args, client, db);
-    if (command.name != "level") {
-      incXP(msg.author.id, db);
+    if (usedCommandRecently.has(msg.author.id)) {
+      msg.reply("You can not use commands. Wait 8 seconds.");
+    } else {
+      command.execute(msg, args, client, db);
+      if (command.name != "level") {
+        incXP(msg.author.id, db);
+      }
+      usedCommandRecently.add(msg.author.id);
+      setTimeout(() => {
+        usedCommandRecently.delete(msg.author.id)
+      }, 5000)
     }
   } catch (err) {
     console.log(err);
