@@ -24,7 +24,7 @@ module.exports = {
               (channel) => channel.name === "astronomia"
             );
             if (channel) {
-              if (JSON.stringify(currentNews) != previousNews) {
+              if (currentNews.news_id != previousNews) {
                 const newsDate = new Date(currentNews.publication);
                 const publicationDate = `${newsDate.getDate()}/${
                   newsDate.getMonth() + 1
@@ -43,7 +43,7 @@ module.exports = {
           });
           //change previous news with current
           await hubbleRef.set({
-            news: JSON.stringify(currentNews),
+            news: currentNews.news_id,
           });
         })
         .catch((err) => {

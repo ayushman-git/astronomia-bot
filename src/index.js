@@ -78,6 +78,8 @@ client.once("ready", () => {
   client.autos.get("changeActivity").execute(client);
   console.log(`Astronomia is in ${client.guilds.cache.size} servers.`);
   checkTextChannels();
+  // Test user
+  // client.users.fetch("538397653982117889").then((data) => console.log(data));
 });
 
 client.on("message", (msg) => {
