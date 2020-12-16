@@ -1,4 +1,4 @@
-const { Client, Collection } = require("discord.js");
+const { Client, Collection, MessageEmbed } = require("discord.js");
 const fs = require("fs");
 const path = require("path");
 require("dotenv").config();
@@ -98,7 +98,7 @@ client.on("message", (msg) => {
   if (!command) return;
   try {
     if (usedCommandRecently.has(msg.author.id)) {
-      msg.reply("You can not use commands. Wait 8 seconds.");
+      msg.reply("You can not use commands. Wait 6 seconds.");
     } else {
       command.execute(msg, args, client, db);
       if (command.name != "level") {
@@ -107,11 +107,56 @@ client.on("message", (msg) => {
       usedCommandRecently.add(msg.author.id);
       setTimeout(() => {
         usedCommandRecently.delete(msg.author.id);
-      }, 5000);
+      }, 6000);
     }
   } catch (err) {
     console.log(err);
     msg.reply("There was an error.");
+  }
+});
+
+client.on("channelCreate", (channel) => {
+  if ((channel.type = "text" && channel.name === "astronomia")) {
+    const embed = new MessageEmbed()
+      .setColor("#F0386B")
+      .setTitle("Astronomia News Channel")
+      .setDescription(
+        `\`\`\`css\nThis channel will now send updates on SpaceX launches, daily APOD and hubble news.\`\`\``
+      )
+      .setThumbnail(channel.guild.iconURL({ size: 128 }))
+      .setFooter("This channel was created on ")
+      .setTimestamp(channel.guild.createdAt);
+    try {
+      channel.send(embed);
+    } catch (err) {
+      console.log(err);
+    }
+  }
+});
+
+client.on("guildCreate", (guild) => {
+  const embed = new MessageEmbed()
+    .setColor("#F0386B")
+    .setDescription(
+      "Thank you for adding astronomia to your server. You can use **.h** or **.help** to get list of all commands. You can also create a text channel named **astronomia** to get latest astronomy news."
+    )
+    .setThumbnail(guild.iconURL({ size: 128 }))
+    .setFooter("Astronomia was added ")
+    .setTimestamp(guild.joinedAt);
+  try {
+    let channelID;
+    let channels = guild.channels.cache;
+    channelLoop: for (let key in channels) {
+      let c = channels[key];
+      if (c[1].type === "text") {
+        channelID = c[0];
+        break channelLoop;
+      }
+    }
+    let channel = guild.channels.cache.get(guild.systemChannelID || channelID);
+    channel.send(embed);
+  } catch (err) {
+    console.log(err);
   }
 });
 
