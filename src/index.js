@@ -171,6 +171,7 @@ setInterval(() => {
 }, 3600000);
 setInterval(() => {
   client.autos.get("fetchData").execute();
+  client.autos.get("fetchVideos").execute(client, db);
 }, 3600000 * 3);
 
 client.login(process.env.DISCORD_BOT_TOKEN);
