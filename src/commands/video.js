@@ -18,7 +18,7 @@ module.exports = {
     message.channel.send(getRandomVid(videoURLs)).then(async (msg) => {
       msgID = msg.id;
       msgInstance = msg;
-      await msg.react("🔀")
+      await msg.react("🔀");
     });
     client.on("messageReactionAdd", async (reaction, user) => {
       if (user.bot) {
@@ -26,6 +26,7 @@ module.exports = {
       }
       if (msgID === reaction.message.id) {
         if (reaction._emoji.name === "🔀") {
+          message.reactions.resolve(reaction).users.remove(user);
           msgInstance.edit(getRandomVid(videoURLs));
         }
       }
