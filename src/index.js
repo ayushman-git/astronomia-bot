@@ -77,6 +77,7 @@ client.once("ready", () => {
   console.log(`Logged in as ${client.user.tag}`);
   client.autos.get("changeActivity").execute(client);
   console.log(`Astronomia is in ${client.guilds.cache.size} servers.`);
+  client.autos.get("fetchVideos").execute(client, db);
   checkTextChannels();
   // Test user
   // client.users.fetch("538397653982117889").then((data) => console.log(data));
@@ -167,11 +168,11 @@ setInterval(() => {
 setInterval(() => {
   client.autos.get("getHubbleNews").execute(client, db);
   client.autos.get("spaceX").execute(client, db);
+  client.autos.get("fetchVideos").execute(client, db);
   client.autos.get("apod").execute(client, db);
 }, 3600000);
 setInterval(() => {
   client.autos.get("fetchData").execute();
-  client.autos.get("fetchVideos").execute(client, db);
 }, 3600000 * 3);
 
 client.login(process.env.DISCORD_BOT_TOKEN);
