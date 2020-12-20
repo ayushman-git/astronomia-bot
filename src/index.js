@@ -21,9 +21,9 @@ const db = new admin.firestore();
 const incXP = require("./support/increaseXP");
 const usedCommandRecently = new Set();
 
-const PREFIX = ".";
+// const PREFIX = ".";
 //Test
-// const PREFIX = "test.";
+const PREFIX = "test.";
 const client = new Client({
   partials: ["MESSAGE", "CHANNEL", "REACTION"],
 });
@@ -77,10 +77,10 @@ client.once("ready", () => {
   console.log(`Logged in as ${client.user.tag}`);
   client.autos.get("changeActivity").execute(client);
   console.log(`Astronomia is in ${client.guilds.cache.size} servers.`);
-  client.autos.get("fetchVideos").execute(client, db);
-  checkTextChannels();
+  // client.autos.get("fetchVideos").execute(client, db);
+  // checkTextChannels();
   // Test user
-  // client.users.fetch("538397653982117889").then((data) => console.log(data));
+  // client.users.fetch("USERID").then((data) => console.log(data));
 });
 
 client.on("message", (msg) => {
@@ -102,7 +102,7 @@ client.on("message", (msg) => {
       msg.reply("You can not use commands. Wait 6 seconds.");
     } else {
       command.execute(msg, args, client, db);
-      if (command.name != "level") {
+      if (command.name != "level" || command.name != "rank") {
         incXP(msg.author.id, db);
       }
       usedCommandRecently.add(msg.author.id);

@@ -32,7 +32,7 @@ const embed = new MessageEmbed()
     },
     {
       name: "```Ranking```",
-      value: `\`\`\`css\n.level - Displays user's current level/profile.\n .l, .lvl, .profile\`\`\``,
+      value: `\`\`\`css\n.level - Displays user's current level/profile.\n.level <username> - Displays level of tagged user.\n.l, .lvl, .profile\n.rank - Displays best ranks.\`\`\``,
     },
     {
       name: "```Sky/Moon view```",
@@ -48,7 +48,7 @@ const embed = new MessageEmbed()
     },
     {
       name: "```Miscellaneous```",
-      value: `\`\`\`css\n.movie, .fact, .quote, .hi | .hi <language>\`\`\``,
+      value: `\`\`\`css\n.video, .movie, .fact, .quote, .hi | .hi <language>\`\`\``,
     },
     {
       name: "\u200b",

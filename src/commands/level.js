@@ -1,6 +1,6 @@
 const Canvas = require("canvas");
 const path = require("path");
-const { MessageAttachment, UserManager } = require("discord.js");
+const { MessageAttachment } = require("discord.js");
 const commandUsage = require("../support/commandUsage");
 
 const levelData = require("../assets/levelData");

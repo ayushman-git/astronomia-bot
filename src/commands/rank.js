@@ -1,10 +1,13 @@
 const { MessageEmbed } = require("discord.js");
+const commandUsage = require("../support/commandUsage");
 
+const name = "rank";
 module.exports = {
-  name: "rank",
+  name,
   aliases: ["r"],
-  description: "Check version",
+  description: "Displays top ranks",
   async execute(message, args, client, db) {
+    commandUsage(name, db);
     message.channel.startTyping();
     const statsRef = db.collection("fetchObjects").doc("userXp");
     const doc = await statsRef.get();
@@ -23,7 +26,9 @@ module.exports = {
               .setColor("#F0386B")
               .setTitle("Top Explorers")
               // .setImage(currentApod.url)
-              .setDescription(`**${topFive[0]}** is the best astronomer here. 🥳🥳`)
+              .setDescription(
+                `**${topFive[0]}** is the best astronomer here. 🥳🥳`
+              )
               .setThumbnail()
               .addFields(
                 {

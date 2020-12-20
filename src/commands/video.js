@@ -1,4 +1,5 @@
 const name = "video";
+const commandUsage = require("../support/commandUsage");
 
 const getRandomVid = function (arr) {
   return arr[Math.floor(Math.random() * arr.length)];
@@ -9,6 +10,8 @@ module.exports = {
   aliases: ["vid"],
   description: "Suggest videos",
   async execute(message, args, client, db) {
+    commandUsage(name, db);
+
     let msgID = null;
     let msgInstance = null;
     const apodRef = db.collection("fetchObjects").doc("videoURL");
