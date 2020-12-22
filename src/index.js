@@ -172,7 +172,7 @@ setInterval(() => {
   client.autos.get("apod").execute(client, db);
 }, 3600000);
 setInterval(() => {
-  client.autos.get("fetchData").execute();
+  client.autos.get("fetchData").execute(db);
 }, 3600000 * 3);
 
 client.login(process.env.DISCORD_BOT_TOKEN);
