@@ -21,9 +21,9 @@ const db = new admin.firestore();
 const incXP = require("./support/increaseXP");
 const usedCommandRecently = new Set();
 
-const PREFIX = ".";
+// const PREFIX = ".";
 //Test
-// const PREFIX = "test.";
+const PREFIX = "test.";
 const client = new Client({
   partials: ["MESSAGE", "CHANNEL", "REACTION"],
 });
@@ -77,8 +77,8 @@ client.once("ready", () => {
   console.log(`Logged in as ${client.user.tag}`);
   client.autos.get("changeActivity").execute(client);
   console.log(`Astronomia is in ${client.guilds.cache.size} servers.`);
-  client.autos.get("fetchVideos").execute(client, db);
-  checkTextChannels();
+  // client.autos.get("fetchVideos").execute(client, db);
+  // checkTextChannels();
   // Test user
   // client.users.fetch("USERID").then((data) => console.log(data));
 });

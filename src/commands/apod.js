@@ -51,6 +51,7 @@ module.exports = {
     (async () => {
       let msgID = null;
       let msgInstance = null;
+      let showDescription = false;
 
       commandUsage(name, db);
       client.on("messageReactionAdd", async (reaction, user) => {
@@ -59,7 +60,8 @@ module.exports = {
         }
         if (msgID === reaction.message.id) {
           if (reaction._emoji.name === "❔") {
-            msgInstance.edit(showEmbed(true));
+            showDescription = !showDescription;
+            msgInstance.edit(showEmbed(showDescription));
           }
         }
       });
@@ -70,12 +72,13 @@ module.exports = {
         }
         if (msgID === reaction.message.id) {
           if (reaction._emoji.name === "❔") {
-            msgInstance.edit(showEmbed());
+            showDescription = !showDescription;
+            msgInstance.edit(showEmbed(showDescription));
           }
         }
       });
 
-      message.channel.send(showEmbed()).then(async (msg) => {
+      message.channel.send(showEmbed(showDescription)).then(async (msg) => {
         msgID = msg.id;
         msgInstance = msg;
         await msg.react("❔");
