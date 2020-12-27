@@ -155,4 +155,4 @@ This idea was started as another week-long project. But I kept coming back to it
 
 You can visit this  [**site**](https://ayushman-git.github.io/astronomia-site/)  to explore more about the bot or you can  [contribute](https://github.com/ayushman-git/astronomia-bot) in this project. If you love astronomy you will love this bot. I’ll end this article with one of my favorite quote.
 
-> “”The cosmos is all that is or ever was or ever will be. Our feeblest contemplations of the Cosmos stir us — there is a tingling in the spine, a catch in the voice, a faint sensation, as if a distant memory, or falling from a height. We know we are approaching the greatest of mysteries.” — Carl Sagan
+> “The cosmos is all that is or ever was or ever will be. Our feeblest contemplations of the Cosmos stir us — there is a tingling in the spine, a catch in the voice, a faint sensation, as if a distant memory, or falling from a height. We know we are approaching the greatest of mysteries.” — Carl Sagan
