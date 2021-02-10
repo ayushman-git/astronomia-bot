@@ -1,9 +1,9 @@
-let totalMembers = 0;
-
 module.exports = {
   name: "thisistotestservers",
   description: "Check server stats",
   execute(message, args, client) {
+    let totalMembers = 0;
+
     client.guilds.cache.array().forEach((server) => {
       totalMembers += server.memberCount;
       console.log(
