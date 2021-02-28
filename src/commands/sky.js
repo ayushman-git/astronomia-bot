@@ -21,16 +21,16 @@ const fetchLatLong = (address, message) => {
     )
     .then((res) => {
       return {
-        lat: res.data[0].lat,
-        long: res.data[0].lon,
-        place: res.data[0].display_name.substring(
+        lat: res.data[0]?.lat,
+        long: res.data[0]?.lon,
+        place: res.data[0]?.display_name.substring(
           0,
           res.data[0].display_name.indexOf(",")
         ),
       };
     })
     .catch((err) => {
-      console.log(err);
+      console.log(err.response.status);
       message.channel.send("Location is not given or invalid.");
       message.channel.stopTyping();
     });
@@ -43,8 +43,8 @@ const fetchSky = (latLong, style, message) => {
       {
         style: style || "navy",
         observer: {
-          latitude: Number(latLong.lat),
-          longitude: Number(latLong.long),
+          latitude: Number(latLong?.lat),
+          longitude: Number(latLong?.long),
           date: new Date(),
         },
         view: {
@@ -53,7 +53,7 @@ const fetchSky = (latLong, style, message) => {
             position: {
               equatorial: {
                 rightAscension: 0,
-                declination: Number(latLong.lat),
+                declination: Number(latLong?.lat),
               },
             },
             zoom: 4,
@@ -69,8 +69,8 @@ const fetchSky = (latLong, style, message) => {
     )
     .then((res) => res.data.data.imageUrl)
     .catch((err) => {
-      console.log(err);
-      message.channel.send("Something went wrong.");
+      console.log(err.response.status);
+      message.channel.send("Something went wrong. Can't generate map.");
       message.channel.stopTyping();
     });
 };
@@ -98,10 +98,13 @@ module.exports = {
       style = args[0];
       address = args.splice(1).join("%20");
     }
-    
+
     message.channel.startTyping();
     const addressDetail = await fetchLatLong(address, message);
-    const mapURL = await fetchSky(addressDetail, style, message);
+    let mapURL;
+    if (addressDetail) {
+      mapURL = await fetchSky(addressDetail, style, message);
+    }
     if (mapURL) {
       const skyEmbed = new MessageEmbed()
         .setColor("#F0386B")

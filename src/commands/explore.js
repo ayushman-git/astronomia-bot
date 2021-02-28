@@ -1,6 +1,6 @@
 const name = "explore";
 
-const commandUsage = require("../support/commandUsage")
+const commandUsage = require("../support/commandUsage");
 const axios = require("axios");
 const { MessageEmbed, MessageAttachment } = require("discord.js");
 const images = require("../assets/images");
@@ -104,6 +104,16 @@ module.exports = {
             });
           }
           message.channel.send(celestialObject);
+        })
+        .catch((err) => {
+          console.log(err.response.status);
+          if (err.response.status === 404) {
+            message.channel.send(
+              "Object not found. OpenData API only cover objects in our solar system."
+            );
+          } else {
+            message.channel.send("Something went wrong.");
+          }
         });
       setTimeout(() => {
         gen.delete();

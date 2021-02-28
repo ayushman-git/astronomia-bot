@@ -29,8 +29,8 @@ const fetchLatLong = (address, message) => {
       };
     })
     .catch((err) => {
-      console.log(err);
-      message.channel.send("Something went wrong while fetching data.");
+      console.log(err.response.status);
+      message.channel.send("Invalid location.");
       message.channel.stopTyping();
     });
 };
@@ -49,8 +49,8 @@ const fetchMoon = (address, message) => {
           textColor: "white",
         },
         observer: {
-          latitude: Number(address.lat),
-          longitude: Number(address.long),
+          latitude: Number(address?.lat),
+          longitude: Number(address?.long),
           date: new Date(),
         },
         view: {
@@ -86,7 +86,10 @@ module.exports = {
     message.channel.startTyping();
     const address = args.join("%20");
     const addressDetail = await fetchLatLong(address, message);
-    const moonURL = await fetchMoon(addressDetail, message);
+    let moonURL;
+    if (addressDetail) {
+      moonURL = await fetchMoon(addressDetail, message);
+    }
     if (moonURL) {
       const moonEmbed = new MessageEmbed()
         .setColor("#F0386B")

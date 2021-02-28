@@ -14,7 +14,9 @@ module.exports = {
     const stats = Object.entries(doc.data());
     const sortedStats = stats.sort((a, b) => b[1] - a[1]).splice(0, 5);
     const topFive = [];
+    let counter = 0;
     sortedStats.forEach((user) => {
+      counter++;
       client.users
         .fetch(user[0])
         .then((data) => {
@@ -25,7 +27,6 @@ module.exports = {
             const embed = new MessageEmbed()
               .setColor("#F0386B")
               .setTitle("Top Explorers")
-              // .setImage(currentApod.url)
               .setDescription(
                 `**${topFive[0]}** is the best astronomer here. 🥳🥳`
               )
@@ -52,11 +53,6 @@ module.exports = {
                   value: `\`\`\` 5 - ${topFive[4]}\`\`\``,
                 }
               );
-            // .setFooter(
-            //   `${publicationDate.getDate()}/${
-            //     publicationDate.getMonth() + 1
-            //   }/${publicationDate.getFullYear()}`
-            // );
             await client.users.fetch(sortedStats[0][0]).then((data) => {
               embed.setThumbnail(
                 data.displayAvatarURL({ format: "jpg", size: 256 })
@@ -64,6 +60,7 @@ module.exports = {
             });
             message.channel.send(embed);
             message.channel.stopTyping();
+            return;
           }
         });
     });
