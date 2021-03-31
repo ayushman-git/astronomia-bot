@@ -68,8 +68,7 @@ module.exports = [
     forNextLevel: 3600,
     title: "Kepler-452b",
     color: "#0e2e6e",
-    description:
-      "Bigger, Older Cousin to Earth.",
+    description: "Bigger, Older Cousin to Earth.",
   },
   {
     level: 8,
@@ -77,8 +76,7 @@ module.exports = [
     forNextLevel: 4500,
     title: "Earth",
     color: "#213693",
-    description:
-      "There's no other place like earth. 🌏",
+    description: "There's no other place like earth. 🌏",
   },
   {
     level: 9,
@@ -95,8 +93,7 @@ module.exports = [
     forNextLevel: 6600,
     title: "Neutron Star",
     color: "#1b21b0",
-    description:
-      "These stars rotate at speed of 1000+ rotations per second.",
+    description: "These stars rotate at speed of 1000+ rotations per second.",
   },
   {
     level: 11,
@@ -104,16 +101,14 @@ module.exports = [
     forNextLevel: 7800,
     title: "UY Scuti",
     color: "#ff1212",
-    description:
-      "Biggest star in the universe.",
+    description: "Biggest star in the universe.",
   },
   {
     level: 12,
     forPreviousLevel: 7800,
-    forNextLevel: 10000,
+    forNextLevel: 90000,
     title: "Black Hole",
     color: "#972bea",
-    description:
-      "The only celestial object where physics laws breaks down.",
+    description: "The only celestial object where physics laws breaks down.",
   },
 ];

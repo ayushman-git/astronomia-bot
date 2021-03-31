@@ -52,6 +52,10 @@ const embed = new MessageEmbed()
     },
     {
       name: "\u200b",
+      value: `\`\`\`diff\n- .level delete - Deletes your progress (PERMANENT)\`\`\``,
+    },
+    {
+      name: "\u200b",
       value: `You can visit [astronomia](https://ayushman-git.github.io/astronomia-site/) site if you want to learn something extra.`,
     }
   );

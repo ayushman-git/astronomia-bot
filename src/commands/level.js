@@ -103,11 +103,16 @@ const createUserCanvas = async (user, userLvl, userXP) => {
   return attachment;
 };
 
+const deleteProgress = async (userID, db) => {
+  const xpRef = db.collection("fetchObjects").doc("userXp");
+  xpRef.update({ [userID]: 0 });
+};
+
 const name = "level";
 module.exports = {
   name,
   aliases: ["l", "lvl", "profile"],
-  description: "Display user EXP card.",
+  description: "Display user XP card.",
   async execute(message, args, client, db) {
     commandUsage(name, db);
     if (args.length === 0) {
@@ -116,13 +121,20 @@ module.exports = {
       message.channel
         .send(await createUserCanvas(message.author, userLvl, userXP))
         .then((msg) => msg.channel.send("```" + userLvl.description + "```"));
-    } else {
+    } else if (args[0].startsWith("<@!")) {
       const user = await client.users.fetch(message.mentions.users.first().id);
       const userXP = await getUserExp(user.id, db);
       const userLvl = calcUserLevel(userXP);
       message.channel
         .send(await createUserCanvas(user, userLvl, userXP))
         .then((msg) => msg.channel.send("```" + userLvl.description + "```"));
+    } else if (args[0] === "reset" || args[0] === "delete") {
+      deleteProgress(message.author.id, db);
+      message.channel.send("**Your progress has been reset.**");
+    } else {
+      message.channel.send(
+        "Invalid paramter. The corrent syntax is: .level <@username> or delete"
+      );
     }
   },
 };
