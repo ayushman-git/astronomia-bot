@@ -1,21 +1,22 @@
 const axios = require("axios");
 const { MessageEmbed } = require("discord.js");
 
-const showEmbed = (currentApod, showDescription) => {
+const showEmbed = (currentApod) => {
+  if (currentApod.media_type === "video") {
+    return apodData.url;
+  }
   const publicationDate = new Date(currentApod.date);
   const apodEmbed = new MessageEmbed()
     .setColor("#F0386B")
     .setTitle(currentApod.title)
     .setURL(currentApod.url)
+    .setDescription(`\`\`\` ${currentApod.explanation}\`\`\``)
     .setImage(currentApod.url)
     .setFooter(
       `${publicationDate.getDate()}/${
         publicationDate.getMonth() + 1
       }/${publicationDate.getFullYear()}`
     );
-  if (showDescription) {
-    apodEmbed.setDescription(`\`\`\` ${currentApod.explanation}\`\`\``);
-  }
   return apodEmbed;
 };
 
@@ -45,40 +46,7 @@ module.exports = {
           });
           if (channel) {
             if (currentApod.date != previousApod) {
-              let msgID = null;
-              let msgInstance = null;
-              let showDescription = false;
-
-              channel
-                .send(showEmbed(currentApod, showDescription))
-                .then(async (msg) => {
-                  msgID = msg.id;
-                  msgInstance = msg;
-                  await msg.react("❔");
-                });
-              client.on("messageReactionAdd", async (reaction, user) => {
-                if (user.bot) {
-                  return;
-                }
-                if (msgID === reaction.message.id) {
-                  if (reaction._emoji.name === "❔") {
-                    showDescription = !showDescription;
-                    msgInstance.edit(showEmbed(currentApod, showDescription));
-                  }
-                }
-              });
-
-              client.on("messageReactionRemove", async (reaction, user) => {
-                if (user.bot) {
-                  return;
-                }
-                if (msgID === reaction.message.id) {
-                  if (reaction._emoji.name === "❔") {
-                    showDescription = !showDescription;
-                    msgInstance.edit(showEmbed(currentApod, showDescription));
-                  }
-                }
-              });
+              channel.send(showEmbed(currentApod));
             }
           }
         });
@@ -87,7 +55,7 @@ module.exports = {
           todayApod: currentApod.date,
         });
       })
-      .catch((err) => {
+      .catch(() => {
         console.log("Error in recieving apod. (Maybe APOD not uploaded yet)");
       });
   },
