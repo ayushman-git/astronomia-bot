@@ -20,6 +20,7 @@ admin.initializeApp({
 const db = new admin.firestore();
 const incXP = require("./support/increaseXP");
 const guildCreateMessage = require("./events/guildCreate");
+const channelCreateMessage = require("./events/channelCreate");
 const usedCommandRecently = new Set();
 
 const PREFIX = ".";
@@ -117,25 +118,8 @@ client.on("message", (msg) => {
   }
 });
 
-client.on("channelCreate", (channel) => {
-  if ((channel.type = "text" && channel.name === "astronomia")) {
-    const embed = new MessageEmbed()
-      .setColor("#F0386B")
-      .setTitle("Astronomia News Channel")
-      .setDescription(
-        `\`\`\`css\nThis channel will now send updates on SpaceX launches, daily APOD and hubble news.\`\`\``
-      )
-      .setThumbnail(channel.guild.iconURL({ size: 128 }))
-      .setFooter("This channel was created on ")
-      .setTimestamp(channel.guild.createdAt);
-    try {
-      channel.send(embed);
-    } catch (err) {
-      console.log(err);
-    }
-  }
-});
 
+channelCreateMessage(client);
 guildCreateMessage(client);
 
 setInterval(() => {
