@@ -1,8 +1,6 @@
 const incXP = require("../support/increaseXP");
 
-const PREFIX = ".";
-//Test
-// const PREFIX = "test.";
+const PREFIX = process.env.DEV ? "test." : ".";
 
 const messageHandler = (client, db) => {
   const usedCommandRecently = new Set();

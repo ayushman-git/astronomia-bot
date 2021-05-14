@@ -1,5 +1,6 @@
 module.exports = {
   checkTextChannels(client, db) {
+    if (process.env.DEV) return;
     let textChannels = 0;
     client.guilds.cache.forEach((server) => {
       const channel = server.channels.cache.find(
