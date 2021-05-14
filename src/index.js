@@ -19,6 +19,7 @@ admin.initializeApp({
 });
 const db = new admin.firestore();
 const incXP = require("./support/increaseXP");
+const clientReadySetup = require("./events/clientReady");
 const guildCreateMessage = require("./events/guildCreate");
 const channelCreateMessage = require("./events/channelCreate");
 const usedCommandRecently = new Set();
@@ -54,37 +55,6 @@ for (const file of autoScripts) {
   client.autos.set(auto.name, auto);
 }
 
-//Check text channels
-const checkTextChannels = function () {
-  let textChannels = 0;
-  client.guilds.cache.forEach((server) => {
-    const channel = server.channels.cache.find(
-      (channel) => channel.name === "astronomia"
-    );
-    if (channel) {
-      textChannels++;
-    }
-  });
-  const ref = db.collection("fetchObjects").doc("commandUsage");
-  ref.set(
-    {
-      textChannels,
-    },
-    { merge: true }
-  );
-};
-
-//Bot is online
-client.once("ready", () => {
-  console.log(`Logged in as ${client.user.tag}`);
-  client.autos.get("changeActivity").execute(client);
-  console.log(`Astronomia is in ${client.guilds.cache.size} servers.`);
-  client.autos.get("fetchVideos").execute(client, db);
-  checkTextChannels();
-  // Test user
-  // client.users.fetch("USERID").then((data) => console.log(data));
-});
-
 client.on("message", (msg) => {
   if (!msg.content.startsWith(PREFIX) || msg.author.bot) return;
   const [CMD_NAME, ...args] = msg.content
@@ -118,7 +88,7 @@ client.on("message", (msg) => {
   }
 });
 
-
+clientReadySetup(client, db)
 channelCreateMessage(client);
 guildCreateMessage(client);
 
