@@ -72,6 +72,6 @@ setInterval(() => {
 }, 3600000 * 1.2);
 setTimeout(() => {
   client.autos.get("spaceFlightNews").execute(client, db);
-}, 3600000 * 6);
+}, 3600000 * 4);
 
 client.login(process.env.DISCORD_BOT_TOKEN);
