@@ -1,6 +1,4 @@
-const { Client, Collection, MessageEmbed } = require("discord.js");
-const fs = require("fs");
-const path = require("path");
+const { Client } = require("discord.js");
 require("dotenv").config();
 const admin = require("firebase-admin");
 admin.initializeApp({
@@ -17,40 +15,23 @@ admin.initializeApp({
     client_x509_cert_url: process.env.FIREBASE_CERT,
   }),
 });
+
 const db = new admin.firestore();
 const messageHandler = require("./events/message");
 const clientReadySetup = require("./events/clientReady");
 const guildCreateMessage = require("./events/guildCreate");
 const channelCreateMessage = require("./events/channelCreate");
+const setupAutos = require("./util/setupAutos");
+const setupCommands = require("./util/setupCommands");
 
 const client = new Client({
   partials: ["MESSAGE", "CHANNEL", "REACTION"],
 });
-client.commands = new Collection();
-client.autos = new Collection();
 
-//array of auto scripts
-const autoScripts = fs
-  .readdirSync(path.join(__dirname, "autos"))
-  .filter((file) => file.endsWith(".js"));
-
-//array of commands
-const commandFiles = fs
-  .readdirSync(path.join(__dirname, "commands"))
-  .filter((file) => file.endsWith(".js"));
-
-//Creating collection of commands
-for (const file of commandFiles) {
-  const command = require(`./commands/${file}`);
-  client.commands.set(command.name, command);
-}
-
-//Creating collection of scripts
-for (const file of autoScripts) {
-  const auto = require(`./autos/${file}`);
-  client.autos.set(auto.name, auto);
-}
-
+(function setup() {
+  setupAutos(client);
+  setupCommands(client);
+})();
 
 clientReadySetup(client, db);
 messageHandler(client, db);
