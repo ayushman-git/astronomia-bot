@@ -200,14 +200,12 @@ module.exports = {
       }
       if (msgID === reaction.message.id) {
         if (reaction._emoji.name === "▶") {
-          message.reactions.resolve(reaction).users.remove(user);
           if (globalIndex >= flights.length - 1) {
             return;
           }
           globalIndex++;
           messageInstance.edit(flightEmbedGen(globalIndex, flights));
         } else if (reaction._emoji.name === "◀") {
-          message.reactions.resolve(reaction).users.remove(user);
           if (globalIndex < 1) {
             globalIndex = 0;
           } else {

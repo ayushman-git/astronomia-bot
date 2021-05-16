@@ -29,7 +29,6 @@ module.exports = {
       }
       if (msgID === reaction.message.id) {
         if (reaction._emoji.name === "🔀") {
-          message.reactions.resolve(reaction).users.remove(user);
           msgInstance.edit(getRandomVid(videoURLs));
         }
       }
