@@ -18,10 +18,12 @@ const client = new Client({
   setupCommands(client);
 })();
 
-clientReadySetup(client, db);
-messageHandler(client, db);
-channelCreateMessage(client);
-guildCreateMessage(client);
+(function setupEvents() {
+  clientReadySetup(client, db);
+  messageHandler(client, db);
+  channelCreateMessage(client);
+  guildCreateMessage(client);
+})();
 
 setInterval(() => {
   client.autos.get("changeActivity").execute(client);
