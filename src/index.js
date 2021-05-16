@@ -51,7 +51,7 @@ setInterval(() => {
 setInterval(() => {
   client.autos.get("fetchData").execute(db);
 }, 3600000 * 1.2);
-setTimeout(() => {
+setInterval(() => {
   client.autos.get("spaceFlightNews").execute(client, db);
 }, 3600000 * 4);
 
