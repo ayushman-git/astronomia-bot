@@ -14,7 +14,7 @@ const client = new Client({
   partials: ["MESSAGE", "CHANNEL", "REACTION"],
 });
 
-(function setup() {
+(function setupCollections() {
   setupAutos(client);
   setupCommands(client);
 })();
