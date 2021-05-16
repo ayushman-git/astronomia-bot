@@ -8,6 +8,7 @@ const guildCreateMessage = require("./events/guildCreate");
 const channelCreateMessage = require("./events/channelCreate");
 const setupAutos = require("./util/setupAutos");
 const setupCommands = require("./util/setupCommands");
+const setupIntervals = require("./util/setupIntervals");
 
 const client = new Client({
   partials: ["MESSAGE", "CHANNEL", "REACTION"],
@@ -25,21 +26,8 @@ const client = new Client({
   guildCreateMessage(client);
 })();
 
-setInterval(() => {
-  client.autos.get("changeActivity").execute(client);
-}, 300000);
-
-setInterval(() => {
-  client.autos.get("getHubbleNews").execute(client, db);
-  client.autos.get("spaceX").execute(client, db);
-  client.autos.get("fetchVideos").execute(client, db);
-  client.autos.get("apod").execute(client, db);
-}, 3600000);
-setInterval(() => {
-  client.autos.get("fetchData").execute(db);
-}, 3600000 * 1.2);
-setInterval(() => {
-  client.autos.get("spaceFlightNews").execute(client, db);
-}, 3600000 * 4);
+(function setupIntervalsTimeouts() {
+  setupIntervals(client);
+})();
 
 client.login(process.env.DISCORD_BOT_TOKEN);
