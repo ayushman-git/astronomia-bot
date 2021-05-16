@@ -18,4 +18,7 @@ module.exports = {
       { merge: true }
     );
   },
+  hoursToMs(hrs) {
+    return hrs * 3600000;
+  }
 };
