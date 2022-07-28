@@ -5,6 +5,7 @@ Let’s start by talking about  **astronomia.**  Astronomia is a discord bot tha
 The astronomia project was perhaps the most exciting project that I worked on. It’s because of two reasons — first, I got something to build that includes astronomy and astronomy always gets me hyped up; the other reason being I get to use so many technologies in a single project. I used several APIs to get data and if there was no API I scrapped data with  **puppeteer**. I also used  **firestore** for some cool stuff and finally  **discord.js** npm module to interact with Discord. I’ll talk about all those technologies and how it helped me to build astronomia.
 ## What is discord.js?
 
+
 ![enter image description here](https://miro.medium.com/max/875/1*sC1_F3ZD4dVXWPrzPSovrg.png)
 
 Before diving into discord.js, let me briefly explain  **Discord**. Discord is basically slack, but marketed towards gamers, though it can be used by anyone who wants to hang out with their friends online. Users can chat with each other in text channels or join voice channels to talk with other members.
