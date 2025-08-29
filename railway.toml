@@ -2,7 +2,8 @@
 builder = "nixpacks"
 
 [build.env]
-# Tell Nixpacks which Node major to use
+NODE_VERSION = "21.1.0"
+PYTHON = "python3"
 NIXPACKS_NODE_VERSION = "21"
 
 [deploy]

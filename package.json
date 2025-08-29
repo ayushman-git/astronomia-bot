@@ -8,7 +8,8 @@
     "start": "node ./src/index.js",
     "dev": "nodemon ./src/index.js",
     "deploy:dev": "node ./src/deploy-commands.js --guild",
-    "deploy:prod": "node ./src/deploy-commands.js --global"
+    "deploy:prod": "node ./src/deploy-commands.js --global",
+    "postinstall": "echo 'Dependencies installed successfully, canvas version:' && npm list canvas --depth=0"
   },
   "author": "Ayushman",
   "license": "ISC",
@@ -27,6 +28,7 @@
     "firebase-admin": "^12.6.0"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=21.0.0 <22.0.0",
+    "npm": ">=10.0.0"
   }
 }

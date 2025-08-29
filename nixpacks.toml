@@ -1,0 +1,30 @@
+[variables]
+NODE_VERSION = "21.1.0"
+PYTHON = "python3"
+
+[phases.setup]
+nixPkgs = [
+  "nodejs-21_x", 
+  "python3", 
+  "pkg-config", 
+  "cairo", 
+  "pango", 
+  "libjpeg", 
+  "giflib", 
+  "librsvg",
+  "pixman"
+]
+nixLibs = [
+  "cairo",
+  "pango", 
+  "libjpeg",
+  "giflib",
+  "librsvg",
+  "pixman"
+]
+
+[phases.install]
+cmds = ["npm ci --verbose"]
+
+[start]
+cmd = "node src/index.js"
