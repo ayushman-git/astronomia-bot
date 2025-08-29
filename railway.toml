@@ -1,0 +1,10 @@
+[build]
+builder = "nixpacks"
+
+[build.env]
+# Tell Nixpacks which Node major to use
+NIXPACKS_NODE_VERSION = "21"
+
+[deploy]
+startCommand = "node src/index.js"
+restartPolicyType = "always"
