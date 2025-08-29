@@ -1,45 +1,52 @@
-const { Client } = require("discord.js");
 require("dotenv").config();
-
+const { Client, GatewayIntentBits, Partials, Collection } = require("discord.js");
 const { db } = require("./db/firebase");
-const messageHandler = require("./events/message");
-const clientReadySetup = require("./events/clientReady");
-const guildCreateMessage = require("./events/guildCreate");
-const channelCreateMessage = require("./events/channelCreate");
 const setupAutos = require("./util/setupAutos");
-const setupCommands = require("./util/setupCommands");
+const registerReady = require("./events/ready");
+const registerInteractionCreate = require("./events/interactionCreate");
+const registerGuildCreate = require("./events/guildCreate");
+const registerChannelCreate = require("./events/channelCreate");
+const loadSlashCommands = require("./util/slashLoader");
 
 const client = new Client({
-  partials: ["MESSAGE", "CHANNEL", "REACTION"],
+  intents: [GatewayIntentBits.Guilds],
+  partials: [Partials.Channel],
 });
 
-(function setup() {
-  setupAutos(client);
-  setupCommands(client);
-})();
+// Collections for commands and cooldowns
+client.commands = new Collection();
+client.cooldowns = new Collection();
 
-(function setupEvents() {
-  clientReadySetup(client, db);
-  messageHandler(client, db);
-  channelCreateMessage(client);
-  guildCreateMessage(client);
-})();
+// Load autos and slash commands
+setupAutos(client);
+loadSlashCommands(client);
 
+// Register events
+registerReady(client, db);
+registerInteractionCreate(client, db);
+registerGuildCreate(client);
+registerChannelCreate(client);
+
+// Schedule autos
 setInterval(() => {
-  client.autos.get("changeActivity").execute(client);
+  const changeActivity = client.autos.get("changeActivity");
+  if (changeActivity) changeActivity.execute(client);
 }, 300000);
 
 setInterval(() => {
-  client.autos.get("getHubbleNews").execute(client, db);
-  client.autos.get("spaceX").execute(client, db);
-  client.autos.get("fetchVideos").execute(client, db);
-  client.autos.get("apod").execute(client, db);
+  ["getHubbleNews", "spaceX", "fetchVideos", "apod"].forEach((k) => {
+    const auto = client.autos.get(k);
+    if (auto) auto.execute(client, db);
+  });
 }, 3600000);
-setInterval(() => {
-  client.autos.get("fetchData").execute(db);
-}, 3600000 * 1.2);
-setInterval(() => {
-  client.autos.get("spaceFlightNews").execute(client, db);
-}, 3600000 * 4);
 
+setInterval(() => {
+  const auto = client.autos.get("fetchData");
+  if (auto) auto.execute(db);
+}, 3600000 * 1.2);
+
+setInterval(() => {
+  const auto = client.autos.get("spaceFlightNews");
+  if (auto) auto.execute(client, db);
+}, 3600000 * 4);
 client.login(process.env.DISCORD_BOT_TOKEN);
