@@ -12,7 +12,9 @@ nixPkgs = [
   "libjpeg", 
   "giflib", 
   "librsvg",
-  "pixman"
+  "pixman",
+  "glibc",
+  "gcc-unwrapped"
 ]
 nixLibs = [
   "cairo",
@@ -20,7 +22,8 @@ nixLibs = [
   "libjpeg",
   "giflib",
   "librsvg",
-  "pixman"
+  "pixman",
+  "glibc"
 ]
 
 [phases.install]

@@ -1,0 +1,34 @@
+{
+  "name": "astronomia",
+  "version": "1.0.0",
+  "description": "A discord bot for astronomers.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./src/index.js",
+    "dev": "nodemon ./src/index.js",
+    "deploy:dev": "node ./src/deploy-commands.js --guild",
+    "deploy:prod": "node ./src/deploy-commands.js --global",
+    "postinstall": "echo 'Dependencies installed successfully'"
+  },
+  "author": "Ayushman",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
+  "dependencies": {
+    "@discordjs/builders": "^1.8.2",
+    "@discordjs/rest": "^2.3.0",
+    "@napi-rs/canvas": "^0.1.43",
+    "axios": "^1.7.7",
+    "btoa": "^1.2.1",
+    "discord-api-types": "^0.37.83",
+    "discord.js": "^14.16.3",
+    "dotenv": "^16.4.5",
+    "firebase-admin": "^12.6.0"
+  },
+  "engines": {
+    "node": ">=21.0.0 <22.0.0",
+    "npm": ">=10.0.0"
+  }
+}
