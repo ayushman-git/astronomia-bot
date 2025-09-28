@@ -18,7 +18,8 @@ module.exports = {
         { name: "Upcoming", value: "/upcoming [type: flights|events]" },
         { name: "Wallpapers", value: "/wallpaper [type: real|random]" },
         { name: "Quotes", value: "/quotes" },
-        { name: "Profile", value: "/level, /rank" }
+        { name: "Profile", value: "/level, /rank" },
+        { name: "Voice Management", value: "/moveusers from_channel:<name> to_channel:<name>" }
       );
     await interaction.reply({ embeds: [embed] });
   },

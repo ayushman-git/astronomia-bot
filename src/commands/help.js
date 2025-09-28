@@ -51,6 +51,10 @@ const embed = new MessageEmbed()
       value: `\`\`\`css\n.video, .movie, .fact, .quote, .hi | .hi <language>\`\`\``,
     },
     {
+      name: "```Voice Channel Management```",
+      value: `\`\`\`css\n.moveusers <from_channel> <to_channel> - Move all users from one voice channel to another\`\`\``,
+    },
+    {
       name: "\u200b",
       value: `\`\`\`diff\n- .level delete - Deletes your progress (PERMANENT)\`\`\``,
     },
